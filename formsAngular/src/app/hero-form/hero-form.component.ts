@@ -7,7 +7,7 @@ import { Hero } from '../hero';
   templateUrl: './hero-form.component.html',
   styleUrls: ['./hero-form.component.css']
 })
-export class HeroFormComponent {
+export class FormularioHeroComponente {
 
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
