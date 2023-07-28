@@ -27,19 +27,14 @@ export class FormularioHeroComponente {
     const myHero =  new Hero(42, 'SkyDog',
                            'Fetch any object at any distance',
                            'Leslie Rollover');
-    console.log('My hero is called ' + myHero.name); // "My hero is called SkyDog"
+    console.log('My hero is called ' + myHero.name);
     return myHero;
   }
 
-  //////// NOT SHOWN IN DOCS ////////
-
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(heroForm)}}
+  
   showFormControls(form: any) {
     return form && form.controls.name &&
-    form.controls.name.value; // Dr. IQ
+    form.controls.name.value;
   }
-
-  /////////////////////////////
 
 }
