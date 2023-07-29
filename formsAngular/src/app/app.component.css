@@ -1,0 +1,8 @@
+app-hero-form {
+    width: 1000px;
+    display: block;
+
+    padding: 5px 10px; 
+
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
+}
