@@ -3,7 +3,7 @@ import { Item } from "./item";
 
 
 @Component({
-  selector: "app-root",
+  selector: "app-item",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.sass"],
 })
