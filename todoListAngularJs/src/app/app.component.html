@@ -2,6 +2,15 @@
   <h1>Todo List Angular JS</h1>
   <label for="addItemInput">TODO&LIST</label>
 
+  <input
+    #newItem
+    placeholder="add an item"
+    (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+    class="lg-text-input"
+    id="addItemInput" />
+
+  <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+
   <div class="btn-wrapper">
     <button
       class="btn btn-menu"
