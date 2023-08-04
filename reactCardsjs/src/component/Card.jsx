@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Card.css';
 
 function Card() {
 	const [apiGithub, setApiGithub] = useState(0);
