@@ -18,7 +18,10 @@
 	border: 1px solid #999;
 }
 
-.name {}
+.name {
+	color: #212121;
+	font-size: 16px;
+}
 
 .infos {}
 
