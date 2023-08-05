@@ -35,7 +35,7 @@ function Card() {
 				</article>
 
 				<footer className="footer">
-					<a href={apiGithub.repos_url} className="link-repo">link-repo</a>
+					<a href={apiGithub.html_url} className="link-repo">link-github</a>
 				</footer>
 			</section>
 		</>
