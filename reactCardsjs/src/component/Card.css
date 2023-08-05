@@ -43,8 +43,22 @@
 	font-size: 15px	;
 }
 
-.bio 
+.bio {
+	width: 100%;
+	height: auto;
+}
+.bio h4 {
+	color: #212121;
+	font-size: 18px;
+	margin: 22px 0px 2px 0px;
+}
+.bio p {
+	color: #242424;
+	margin: 0px 0px 0px 5px;
+}
 
-.footer {}
+.footer {
+	margin-top: 25px;
+}
 
 .link-repo {}
