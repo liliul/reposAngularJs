@@ -62,6 +62,25 @@
 	color: #242424;
 	margin: 0px 0px 0px 5px;
 }
+.n {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+
+	margin: 8px 0px 0px 0px;
+}
+.n .p-repos {
+	margin: 0;
+	font-size: 12px;
+	color: #121214;
+	font-weight: bold;
+}
+.n .g-repos {
+	margin: 0;
+	font-size: 12px;
+	color: #121214;
+	font-weight: bold;
+}
 
 .footer {
 	margin-top: 25px;
