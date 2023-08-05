@@ -31,6 +31,11 @@ function Card() {
 					<div className="bio">
 						<h4>Bio:</h4>
 						<p>{apiGithub.bio}</p>
+					</div>
+
+					<div className="n">
+						<p className="p-repos">repos: {apiGithub.public_repos}</p>
+						<p className="g-repos">gists: {apiGithub.public_gists}</p>
 					</div>				
 				</article>
 
