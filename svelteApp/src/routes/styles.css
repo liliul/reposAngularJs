@@ -77,6 +77,27 @@ pre {
 	justify-content: center;
 	margin: 0 auto;
 }
+.box {
+	width: 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+.box .item {
+	width: 110px;
+	height: 110px;
+	border-radius: 20px;
+}
+.box .a {
+	background-color: #f19b7e;
+}
+.box .b {
+	background-color: #acf4ab;
+}
+.box .c {
+	background-color: #f4f498;
+}
 
 input,
 button {
