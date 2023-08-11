@@ -13,6 +13,9 @@ function Repos() {
     return (
         <>
             <section className="container-repo">
+                <button className='b-repos'>
+                    <a href="https://github.com/maykbrito" target='_blank'>Link Github</a>
+                </button>
                 {repos.map((item) =>  
                     <div key={item.id}>
                         <h1>{item.name}</h1>
