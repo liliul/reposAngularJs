@@ -7,8 +7,8 @@ function Card() {
 	useEffect(() => {
 		fetch('https://api.github.com/users/maykbrito')
 			.then(response => response.json())
-			.then(data => setApiGithub(data))
-	})
+			.then(data => console.log(setApiGithub(data)))
+	},[1])
 
 	return (
 
