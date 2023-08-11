@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import './Card.css';
 
 function Card() {
@@ -40,7 +41,7 @@ function Card() {
 				</article>
 
 				<footer className="footer">
-					<a href={apiGithub.html_url} className="link-repo">link-github</a>
+					<Link to="/repos" className="link-repo">link-repos</Link>
 				</footer>
 			</section>
 		</>
