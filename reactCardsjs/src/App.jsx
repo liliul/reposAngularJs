@@ -5,12 +5,18 @@
 
 import Card from './component/Card';
 import Repos from './component/Repos';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
 function App() {
 
   return (
     <>
-      <Repos />
-      <Card />
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Card />} />
+            <Route path='/repos' element={<Repos />} />
+          </Routes>
+      </BrowserRouter>
     </>
   )
 }
