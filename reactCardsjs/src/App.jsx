@@ -4,11 +4,12 @@
 // import './App.css'
 
 import Card from './component/Card';
-
+import Repos from './component/Repos';
 function App() {
 
   return (
     <>
+      <Repos />
       <Card />
     </>
   )
