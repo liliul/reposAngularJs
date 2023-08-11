@@ -16,12 +16,15 @@ function Repos() {
                 <button className='b-repos'>
                     <a href="https://github.com/maykbrito" target='_blank'>Link Github</a>
                 </button>
-                {repos.map((item) =>  
-                    <div key={item.id}>
-                        <h1>{item.name}</h1>
-                        <h4>{item.html_url}</h4>
-                    </div>
-                )}
+
+                <div className='container-cards'>
+                    {repos.map((item) =>  
+                        <div key={item.id}>
+                            <h1>{item.name}</h1>
+                            <h4>{item.html_url}</h4>
+                        </div>
+                    )}
+                </div>
             </section>
         </>
     )
