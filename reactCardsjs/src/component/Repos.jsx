@@ -13,7 +13,7 @@ function Repos() {
     return (
         <>
             <section className="container-repo">
-                <button className='b-repos'>
+                <button className='b-link_github'>
                     <a href="https://github.com/maykbrito" target='_blank'>Link Github</a>
                 </button>
 

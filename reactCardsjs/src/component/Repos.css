@@ -1,0 +1,25 @@
+.container-repo {
+    width: 1000px;
+    height: auto;
+
+    display: flex;
+    gap: 20px;
+}
+.b-link_github {
+    width: 130px;
+    height: 45px;
+    background-color: #242424;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 5px 10px white;
+}
+.b-link_github > a {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-weight: bold;
+}
+.b-link_github > a:hover {
+    color: #999;
+}
