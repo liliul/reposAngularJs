@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 
 const Content = () => {
     return (
@@ -10,6 +11,14 @@ const Content = () => {
 
             <h1>Content</h1>
             <Link href="/">Page Inicial</Link>
+
+            <div className="w-[300px] h-[200px] bg-white">
+                <Image
+                    src="/next.svg"
+                    width={200}
+                    height={200}
+                />
+            </div>
         </>
     )
 }
