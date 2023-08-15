@@ -7,7 +7,8 @@ export default function Home() {
       <Link href="/about">Link para About</Link>
       <br />
       <Link href="/content">Link para Content</Link>
-
+      <br />
+      <Link href="/exit">Link para Exit</Link>
     </main>
   )
 }
