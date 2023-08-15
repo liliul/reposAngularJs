@@ -17,6 +17,7 @@ const Content = () => {
                     src="/next.svg"
                     width={200}
                     height={200}
+                    alt="Image nextJS"
                 />
             </div>
         </>
