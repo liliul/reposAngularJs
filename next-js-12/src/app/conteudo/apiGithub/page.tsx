@@ -15,8 +15,8 @@ export default function ApiGithub() {
     return (
         <>
         {api.map((items) =>
-            <section key={items.id}>
-                <div>
+            <section key={items.id} className='w-full h-auto flex justify-center'>
+                <div className='w-[400px] border border-gray-100 m-3 p-3'>
                     <h1>{items.html_url}</h1>
                     <p>{items.description}</p>
                 </div>
