@@ -9,6 +9,7 @@ function Card() {
 		fetch('https://api.github.com/users/maykbrito')
 			.then(response => response.json())
 			.then(data => console.log(setApiGithub(data)))
+			.catch(error => console.error(error))
 	},[1])
 
 	return (

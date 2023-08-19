@@ -8,6 +8,7 @@ function Repos() {
         fetch('https://api.github.com/users/maykbrito/repos')
             .then(req => req.json())
             .then(res => console.log(setRepos(res)))
+            .catch(error => console.error(error))
     },[1])
 
     return (
