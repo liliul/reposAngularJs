@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 type ApiGithubType = {
     id: number,
-    html_url: String,
-    description: String
+    html_url: string,
+    description: string
 }
 export default function ApiGithub() {
 
