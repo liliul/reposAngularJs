@@ -3,9 +3,14 @@
 import {useState,useEffect} from 'react'
 import Link from 'next/link'
 
+type ApiGithubType = {
+    id: number,
+    html_url: String,
+    description: String
+}
 export default function ApiGithub() {
 
-    const [api, setApi] = useState([])
+    const [api, setApi] = useState<ApiGithubType[]>([])
 
     useEffect(() => {
         fetch('https://api.github.com/users/diego3g/repos')
