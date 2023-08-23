@@ -1,14 +1,19 @@
 import {useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import './Repos.css';
+import Loading from './loading/Index';
 
 function Repos() {
     const [repos, setRepos] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         fetch('https://api.github.com/users/maykbrito/repos')
             .then(req => req.json())
-            .then(res => console.log(setRepos(res)))
+            .then(res => {
+                console.log(setRepos(res))
+                setLoading(true)
+            })
             .catch(error => console.error(error))
     },[1])
 
@@ -17,11 +22,14 @@ function Repos() {
             <button className="home">
                 <Link to="/">Inicio</Link>
             </button>
+
             <section className="container-repo">
                 <button className='b-link_github'>
                     <a href="https://github.com/maykbrito" target='_blank'>Link Github</a>
                 </button>
-
+                
+                {!loading && <Loading />}
+                
                 <div className='container-cards'>
                     {repos.map((item) =>  
                         <div key={item.id}>
