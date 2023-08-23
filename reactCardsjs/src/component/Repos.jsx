@@ -8,13 +8,15 @@ function Repos() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch('https://api.github.com/users/maykbrito/repos')
+        setTimeout(() => {
+            fetch('https://api.github.com/users/maykbrito/repos')
             .then(req => req.json())
             .then(res => {
                 console.log(setRepos(res))
                 setLoading(true)
             })
             .catch(error => console.error(error))
+        }, 1000)
     },[1])
 
     return (
