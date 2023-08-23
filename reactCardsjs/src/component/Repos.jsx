@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import './Repos.css';
 
 function Repos() {
@@ -13,6 +14,9 @@ function Repos() {
 
     return (
         <>
+            <button className="home">
+                <Link to="/">Inicio</Link>
+            </button>
             <section className="container-repo">
                 <button className='b-link_github'>
                     <a href="https://github.com/maykbrito" target='_blank'>Link Github</a>
