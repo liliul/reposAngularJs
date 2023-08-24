@@ -1,3 +1,5 @@
+import './Index.css';
+
 export default function LoadCard() {
     return (
         <>
