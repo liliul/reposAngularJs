@@ -2,3 +2,60 @@
     font-size: 40px;
     color: #242424;
 }
+
+.loadCard {
+    width: 300px;
+
+	padding: 10px;
+	border-radius: 10px;
+
+	background-color: white;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.loadCard .card-avatar {
+    width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	border: 1px solid #999;
+
+    background-color: var(--bg-load-card);
+}
+
+.loadCard .card-name {
+    width: 120px;
+    height: 16px;
+
+    background-color: var(--bg-load-card);
+
+    margin-top: 8px;
+}
+
+.loadCard .card-infos {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-top: 15px;
+}
+.loadCard .card-infos .card-items {
+    width: 140px;
+    height: 16px;
+
+    background-color: var(--bg-load-card);
+    margin: 0px 0px 5px 0px;
+}
+
+.loadCard .card-footer {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.loadCard .card-footer .foo {
+    width: 120px;
+    height: 16px;
+
+    background-color: var(--bg-load-card);
+}
