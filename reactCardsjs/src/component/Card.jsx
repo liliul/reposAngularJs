@@ -1,22 +1,29 @@
 import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import './Card.css';
+import LoadCard from './loading/LoadCard';
 
 function Card() {
 	const [apiGithub, setApiGithub] = useState([]);
+	const [loadCard, setLoadCard] = useState(false);
 
 	useEffect(() => {
-		fetch('https://api.github.com/users/maykbrito')
+		setTimeout(() => {
+			fetch('https://api.github.com/users/maykbrito')
 			.then(response => response.json())
-			.then(data => console.log(setApiGithub(data)))
+			.then(data => {
+				console.log(setApiGithub(data))
+				setLoadCard(true)
+			})
 			.catch(error => console.error(error))
+		}, 2000)
 	},[1])
 
 	return (
 
 		<>
 			<section className="card">
-
+			{!loadCard && <LoadCard />}
 				<div className="avatar">
 					<img className="img-avatar" src={apiGithub.avatar_url} alt="Avatar" />
 				</div>

@@ -4,19 +4,19 @@ export default function LoadCard() {
     return (
         <>
             <div className="loadCard">
-                <div className="card-avatar"></div>
+                <div className="card-avatar inOn"></div>
 
-                <div className="card-name"></div>
+                <div className="card-name inOn"></div>
 
                 <section className="card-infos">
-                    <div className="card-items"></div>
-                    <div className="card-items"></div>
-                    <div className="card-items"></div>
-                    <div className="card-items"></div>
+                    <div className="card-items inOn"></div>
+                    <div className="card-items inOn"></div>
+                    <div className="card-items inOn"></div>
+                    <div className="card-items inOn"></div>
                 </section>
 
                 <footer className="card-footer">
-                    <div className="foo"></div>
+                    <div className="foo inOn"></div>
                 </footer>
             </div>
         </>
