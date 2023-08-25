@@ -5,7 +5,7 @@
 
 .loadCard {
     width: 300px;
-    height: 80vh;
+    height: auto;
 
 	padding: 10px;
 	border-radius: 10px;
@@ -23,7 +23,6 @@
     width: 45px;
 	height: 45px;
 	border-radius: 50%;
-	border: 1px solid #999;
 
     background-color: var(--bg-load-card);
 }
