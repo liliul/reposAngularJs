@@ -8,17 +8,16 @@ function Card() {
 	const [loadCard, setLoadCard] = useState(false);
 
 	useEffect(() => {
+		setTimeout(() => {
 			fetch('https://api.github.com/users/maykbrito')
 			.then(response => response.json())
 			.then(data => {
 				console.log(setApiGithub(data))
-				
-				setTimeout(function() {
-					setLoadCard(true)
-				})
-			}, 2000)
+				setLoadCard(true)
+			})
 			.catch(error => console.error(error))
-	},[1])
+		}, 2000)	
+	},[])
 
 	return (
 
