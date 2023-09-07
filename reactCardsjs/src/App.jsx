@@ -6,6 +6,7 @@
 import Card from './component/Card';
 import Repos from './component/Repos';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import About from './component/pages/About';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Card />} />
             <Route path='/repos' element={<Repos />} />
+            <Route path='/about' element={<About />} />
           </Routes>
       </BrowserRouter>
     </>
