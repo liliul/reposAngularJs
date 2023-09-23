@@ -8,18 +8,6 @@ function Repos() {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         fetch('https://api.github.com/users/maykbrito/repos')
-    //         .then(req => req.json())
-    //         .then(res => {
-    //             console.log(setRepos(res))
-    //             setLoading(true)
-    //         })
-    //         .catch(error => console.error(error))
-    //     }, 1000)
-    // },[1])
-
     useEffect(() => {
         apiRepos.get("").then((response) => {
             setRepos(response.data)
