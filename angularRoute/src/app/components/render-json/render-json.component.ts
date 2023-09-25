@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class RenderJsonComponent {
 
+  urlJsonApi = http://localhost:3000/nomes
+
 }
