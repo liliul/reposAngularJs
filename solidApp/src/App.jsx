@@ -5,6 +5,7 @@ import './App.css'
 
 import MyComponent from './components/Props1';
 import TestandoCreateSignal from './components/CreateSignal';
+import Form from './components/CreateSignal2';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -40,6 +41,12 @@ function App() {
 
       <div>
         <TestandoCreateSignal />
+      </div>
+
+      <br />
+
+      <div>
+        <Form />
       </div>
     </>
   )
