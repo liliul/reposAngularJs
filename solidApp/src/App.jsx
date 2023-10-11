@@ -6,6 +6,7 @@ import './App.css'
 import MyComponent from './components/Props1';
 import TestandoCreateSignal from './components/CreateSignal';
 import Form from './components/CreateSignal2';
+import Parent from './components/Props2';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -47,6 +48,12 @@ function App() {
 
       <div>
         <Form />
+      </div>
+
+      <br />
+
+      <div class="props">
+        <Parent />
       </div>
     </>
   )
