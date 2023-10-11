@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import MyComponent from './components/Props1';
+import TestandoCreateSignal from './components/CreateSignal';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -33,6 +34,12 @@ function App() {
 
       <div>
         <MyComponent name="Solid props javascript" />
+      </div>
+
+      <br />
+
+      <div>
+        <TestandoCreateSignal />
       </div>
     </>
   )
