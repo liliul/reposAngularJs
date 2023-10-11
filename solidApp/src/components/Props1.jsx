@@ -1,5 +1,5 @@
 function MyComponent(props) {
-    return <div>Nova {props.name}</div>;
+    return <div class="props">Nova {props.name}</div>;
 }
 
 export default MyComponent;

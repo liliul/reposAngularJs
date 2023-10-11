@@ -67,3 +67,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.props {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+}

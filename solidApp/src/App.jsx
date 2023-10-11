@@ -32,7 +32,7 @@ function App() {
       </p>
 
       <div>
-        <MyComponent name="Solid props" />
+        <MyComponent name="Solid props javascript" />
       </div>
     </>
   )
