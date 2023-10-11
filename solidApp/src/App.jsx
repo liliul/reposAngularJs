@@ -3,6 +3,8 @@ import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import MyComponent from './components/Props1';
+
 function App() {
   const [count, setCount] = createSignal(0)
 
@@ -28,6 +30,10 @@ function App() {
       <p class="read-the-docs">
         Click on the Vite and Solid logos to learn more
       </p>
+
+      <div>
+        <MyComponent name="Solid props" />
+      </div>
     </>
   )
 }
