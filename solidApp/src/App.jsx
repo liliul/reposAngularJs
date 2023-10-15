@@ -1,4 +1,5 @@
 import { createSignal } from 'solid-js'
+import { Routes, Route, A } from "@solidjs/router";
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,15 +9,24 @@ import TestandoCreateSignal from './components/CreateSignal';
 import Form from './components/CreateSignal2';
 import Parent from './components/Props2';
 
+// testando router do solidjs
+import Page1 from './components/testeRouter/Page1';
+
+
 function App() {
   const [count, setCount] = createSignal(0)
 
   return (
     <>
+      <Routes>
+        <Route path="/page1" component={Page1} />
+      </Routes>
+
+
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <A href="/page1" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
+        </A>
         <a href="https://solidjs.com" target="_blank">
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
