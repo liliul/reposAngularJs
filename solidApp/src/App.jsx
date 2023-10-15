@@ -1,5 +1,5 @@
 import { createSignal, lazy } from 'solid-js'
-import { Routes, Route, A } from "@solidjs/router";
+import { Routes, Route, A, Outlet } from "@solidjs/router";
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -21,6 +21,7 @@ function App() {
     <>
       <Routes>
         <Route path="/page1" component={Page1} />
+        <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
       </Routes>
 
 
@@ -28,7 +29,7 @@ function App() {
         <A href="/page1">
           <img src={viteLogo} class="logo" alt="Vite logo" />
         </A>
-        <a href="https://solidjs.com" target="_blank">
+        <a href="/outlet">
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
       </div>
@@ -66,6 +67,10 @@ function App() {
       <div class="props">
         <Parent />
       </div>
+      
+      <br />
+
+      <Outlet />
     </>
   )
 }
