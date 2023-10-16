@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/page1" component={Page1} />
         <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
+        <Route path="/element" element={<div>Naruto Sasuke Kakashi Itachi</div>} />
       </Routes>
 
 
@@ -71,6 +72,12 @@ function App() {
       <br />
 
       <Outlet />
+
+      <br />
+
+      <div class="props">
+        <A href="/element">Personagens de Naruto</A>
+      </div>
     </>
   )
 }
