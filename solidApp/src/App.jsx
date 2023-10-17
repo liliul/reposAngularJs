@@ -9,6 +9,8 @@ import TestandoCreateSignal from './components/CreateSignal';
 import Form from './components/CreateSignal2';
 import Parent from './components/Props2';
 
+import UserApi from './components/novaPage/FetchUser';
+
 // testando router do solidjs
 // import Page1 from './components/testeRouter/Page1';
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
@@ -23,6 +25,8 @@ function App() {
         <Route path="/page1" component={Page1} />
         <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
         <Route path="/element" element={<div>Naruto Sasuke Kakashi Itachi</div>} />
+
+        <Route path="/userapi" component={UserApi}/>
       </Routes>
 
 
@@ -77,6 +81,12 @@ function App() {
 
       <div class="props">
         <A href="/element">Personagens de Naruto</A>
+      </div>
+
+      <br />
+
+      <div class="props">
+        <A href="/userapi">UserApi</A>
       </div>
     </>
   )

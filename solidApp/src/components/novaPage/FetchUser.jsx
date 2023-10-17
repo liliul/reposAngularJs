@@ -1,7 +1,7 @@
 import { createEffect, createSignal } from 'solid-js';
 
 function UserApi() {
-	const [user, setUser] = createSignal([]);
+	const [user, setUser] = createSignal({});
 	console.log(user)
 	createEffect(() => {
 		fetch('https://api.github.com/users/maykbrito')
