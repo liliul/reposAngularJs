@@ -1,4 +1,6 @@
 import { createEffect, createSignal } from 'solid-js';
+import { MetaProvider, Title } from '@solidjs/meta';
+
 
 function UserApi() {
 	const [user, setUser] = createSignal({});
@@ -15,6 +17,12 @@ function UserApi() {
 
 	return (
 		<>
+			<MetaProvider>
+                
+                  <Title>FetchUser</Title>
+                  
+            </MetaProvider>
+
 			<div class="props">
 				<h1>{user.name}</h1>
 				<br />
