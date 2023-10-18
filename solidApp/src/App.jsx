@@ -1,5 +1,6 @@
 import { createSignal, lazy } from 'solid-js'
 import { Routes, Route, A, Outlet } from "@solidjs/router";
+import { MetaProvider, Title } from '@solidjs/meta';
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -21,6 +22,12 @@ function App() {
 
   return (
     <>
+      <MetaProvider>
+                
+        <Title>Home App</Title>
+                  
+      </MetaProvider>
+
       <Routes>
         <Route path="/page1" component={Page1} />
         <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
