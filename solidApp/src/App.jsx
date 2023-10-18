@@ -29,6 +29,7 @@ function App() {
       </MetaProvider>
 
       <Routes>
+        <Route path="/" element={<h3>Home App</h3>} />
         <Route path="/page1" component={Page1} />
         <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
         <Route path="/element" element={<div>Naruto Sasuke Kakashi Itachi</div>} />
