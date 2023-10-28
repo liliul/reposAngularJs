@@ -51,7 +51,9 @@ function Card() {
 				</article>
 
 				<footer className="footer">
-					<Link to="/repos" className="link-repo">link-repos</Link>
+					<button className="home">
+						<Link to="/repos">link-repos</Link>
+					</button>
 				</footer>
 			</section>
 		</>
