@@ -10,7 +10,7 @@ import TestandoCreateSignal from './components/CreateSignal';
 import Form from './components/CreateSignal2';
 import Parent from './components/Props2';
 
-import UserApi from './components/novaPage/FetchUser';
+const UserApi = lazy(() => import('./components/novaPage/FetchUser'));
 
 // testando router do solidjs
 // import Page1 from './components/testeRouter/Page1';
