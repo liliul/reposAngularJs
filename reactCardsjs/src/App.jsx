@@ -1,8 +1,10 @@
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
 import Card from './component/Card';
 import Repos from './component/Repos';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import About from './component/pages/About';
 import UseArray from './component/testUseState/stateArray';
+
 
 function App() {
 
