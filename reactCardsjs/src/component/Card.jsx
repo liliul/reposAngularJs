@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import './Card.css';
 import LoadCard from './loading/LoadCard';
+import LinksButtons from './linksButton/index';
 
 function Card() {
 	const [apiGithub, setApiGithub] = useState([]);
@@ -22,6 +23,7 @@ function Card() {
 	return (
 
 		<>
+			<LinksButtons />
 			<section className="card">
 			{!loadCard && <LoadCard />}
 				<div className="avatar">
