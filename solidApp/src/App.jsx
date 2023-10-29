@@ -16,6 +16,7 @@ const UserApi = lazy(() => import('./components/novaPage/FetchUser'));
 // import Page1 from './components/testeRouter/Page1';
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
+import {Bookshelf} from './components/api/Main';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -95,6 +96,12 @@ function App() {
 
       <div class="props">
         <A href="/userapi">UserApi</A>
+      </div>
+
+      <br />
+
+      <div class="props">
+        <Bookshelf name="Solid"/>
       </div>
     </>
   )
