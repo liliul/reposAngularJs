@@ -1,9 +1,9 @@
-import { createEffect, createSignal, createResource } from 'solid-js';
+import { createEffect, createSignal, createResource, Show, For } from 'solid-js';
 import { MetaProvider, Title } from '@solidjs/meta';
 
 
 function UserApi() {
-	// const [user, setUser] = createSignal({});
+	// const [user, setUser] = createSignal();
 	// console.log(user)
 	// createEffect(() => {
 	// 	fetch('https://api.github.com/users/maykbrito')
@@ -16,7 +16,7 @@ function UserApi() {
 	// })
 
 	const [data] = createResource(ApiGithub)
-	console.log('data', data)
+	// console.log('data', data())
 
 	return (
 		<>
@@ -26,25 +26,22 @@ function UserApi() {
                   
             </MetaProvider>
 
-			<div class="props">
-				<h1>{user.name}</h1>
-				<br />
-				<b>{user.bio}</b>
-				<br />
-				<p>{user.company}</p>
-			</div>			
+			<Show when={data()} fallback={<p>...Loading</p>}>
+				<div class="props">
+					<For each={data()}>
+						{(dados) => (
+							<h3>{dados.name}</h3>
+						)}
+					</For>
+				</div>
+			</Show>			
 		</>
 	)
 }
 
 export default UserApi;
 
-function ApiGithub() {
-	fetch('https://api.github.com/users/maykbrito')
-	.then((req) => req.json())
-	.then((res) => {
-		console.log(res)
-		setUser(res)
-	})
-	.catch((error) => console.error(error))
+async function ApiGithub() {
+	const res = await fetch('https://api.github.com/users/maykbrito/repos')
+	return res.json();
 }
