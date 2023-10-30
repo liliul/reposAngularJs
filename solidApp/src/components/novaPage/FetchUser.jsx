@@ -1,22 +1,9 @@
-import { createEffect, createSignal, createResource, Show, For } from 'solid-js';
+import { createResource, Show, For } from 'solid-js';
 import { MetaProvider, Title } from '@solidjs/meta';
 
 
 function UserApi() {
-	// const [user, setUser] = createSignal();
-	// console.log(user)
-	// createEffect(() => {
-	// 	fetch('https://api.github.com/users/maykbrito')
-	// 	.then((req) => req.json())
-	// 	.then((res) => {
-	// 		console.log(res)
-	// 		setUser(res)
-	// 	})
-	// 	.catch((error) => console.error(error))
-	// })
-
 	const [data] = createResource(ApiGithub)
-	// console.log('data', data())
 
 	return (
 		<>
