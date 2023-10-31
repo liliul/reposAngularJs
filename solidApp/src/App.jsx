@@ -16,7 +16,8 @@ const UserApi = lazy(() => import('./components/novaPage/FetchUser'));
 // import Page1 from './components/testeRouter/Page1';
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
-import {Bookshelf} from './components/api/Main';
+import { Bookshelf } from './components/api/Main';
+import TestandoCreateEffect from './components/CreateEffect';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -24,9 +25,9 @@ function App() {
   return (
     <>
       <MetaProvider>
-                
+
         <Title>Home App</Title>
-                  
+
       </MetaProvider>
 
       <Routes>
@@ -35,7 +36,7 @@ function App() {
         <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
         <Route path="/element" element={<div>Naruto Sasuke Kakashi Itachi</div>} />
 
-        <Route path="/userapi" component={UserApi}/>
+        <Route path="/userapi" component={UserApi} />
       </Routes>
 
 
@@ -81,7 +82,7 @@ function App() {
       <div class="props">
         <Parent />
       </div>
-      
+
       <br />
 
       <Outlet />
@@ -101,7 +102,13 @@ function App() {
       <br />
 
       <div class="props">
-        <Bookshelf name="Solid"/>
+        <Bookshelf name="Solid" />
+      </div>
+
+      <br />
+
+      <div className="props">
+        <TestandoCreateEffect />
       </div>
     </>
   )
