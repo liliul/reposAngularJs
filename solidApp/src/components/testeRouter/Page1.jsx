@@ -9,8 +9,8 @@ const dbJson = [
 ];
 
 function Page1() {
-    const [listaNomes, setListaNomes] = createSignal(dbJson);
-    console.log(listaNomes())
+    const [listaNomes, setListaNomes] = createSignal("");
+    console.log(setListaNomes(dbJson))
     return (
         <>
             <MetaProvider>
