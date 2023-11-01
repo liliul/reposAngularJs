@@ -1,3 +1,4 @@
+import {createSignal} from 'solid-js';
 import { MetaProvider, Title, Link, Meta } from '@solidjs/meta';
 
 const dbJson = [
@@ -8,7 +9,8 @@ const dbJson = [
 ];
 
 function Page1() {
-
+    const [listaNomes, setListaNomes] = createSignal(dbJson);
+    console.log(listaNomes())
     return (
         <>
             <MetaProvider>
