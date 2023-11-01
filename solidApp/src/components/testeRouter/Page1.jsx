@@ -1,6 +1,14 @@
 import { MetaProvider, Title, Link, Meta } from '@solidjs/meta';
 
+const dbJson = [
+    {name: "Naruto",lastName: "Uzumaki"},
+    {name: "Itachi",lastName: "Uchiha"},
+    {name: "Kakashi",lastName: "Hatake"},
+    {name: "Sasuke",lastName: "Uchiha"},
+];
+
 function Page1() {
+
     return (
         <>
             <MetaProvider>
