@@ -1,4 +1,4 @@
-import {createSignal} from 'solid-js';
+import { createSignal, For } from 'solid-js';
 import { MetaProvider, Title, Link, Meta } from '@solidjs/meta';
 
 const dbJson = [
@@ -22,6 +22,17 @@ function Page1() {
             </MetaProvider>
 
             <h1>Testando Router no Solid JS</h1>
+
+            <ul>
+                <For each={listaNomes()}>
+                    {(list) => (
+                        <li>
+                            {list.name}
+                            <span style={{ "font-style": "italic" }}> ({list.lastName})</span>
+                        </li>
+                    )}
+                </For>
+            </ul>
         </>
     )
 }
