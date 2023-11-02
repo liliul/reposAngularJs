@@ -18,6 +18,7 @@ const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
 import { Bookshelf } from './components/api/Main';
 import TestandoCreateEffect from './components/CreateEffect';
+import Effect2 from './components/CreateEffect2';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -109,6 +110,12 @@ function App() {
 
       <div className="props">
         <TestandoCreateEffect />
+      </div>
+
+      <br />
+
+      <div className="props">
+        <Effect2 />
       </div>
     </>
   )
