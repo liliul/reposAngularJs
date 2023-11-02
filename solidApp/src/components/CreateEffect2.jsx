@@ -7,11 +7,16 @@ export default function Effect2() {
 			segundo: "Hyhuga"
 		}
 	})
+	console.log('nome', nome)
+	
+	function updateName() {
+		setNome("nome", "segundo", "Uzumaki")
+	}
 
 	return (
 		<>
 			<div className="props">
-				<button>Update Name</button>
+				<button onClick={updateName}>Update Name</button>
 			</div>
 		</>
 	)
