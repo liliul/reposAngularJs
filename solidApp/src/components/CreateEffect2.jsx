@@ -1,17 +1,22 @@
-import { createEffect, createStore } from 'solid-js';
+import { createEffect } from 'solid-js';
+import { createStore } from "solid-js/store";
 
 export default function Effect2() {
-	const [nome, setNome] = createStore({
+	const [nomeInfo, setNomeInfo] = createStore({
 		nome: {
 			primeiro: "Naruto",
 			segundo: "Hyhuga"
 		}
 	})
-	console.log('nome', nome)
-	
+	console.log('nome', nomeInfo)
+
 	function updateName() {
-		setNome("nome", "segundo", "Uzumaki")
+		setNomeInfo("nome", "segundo", "Uzumaki")
 	}
+
+	createEffect(() => {
+		console.log(nomeInfo.nome.segundo)
+	})
 
 	return (
 		<>
