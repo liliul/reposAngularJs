@@ -25,8 +25,8 @@ function Page1() {
 
             <ul style="list-style: none;" className="props">
                 <For each={listaNomes()}>
-                    {(list) => (
-                        <li>
+                    {(list, index) => (
+                        <li data-id={`${index()}`}>
                             {list.name}
                             <span style={{ "font-style": "italic" }}> ({list.lastName})</span>
                         </li>
