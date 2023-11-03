@@ -20,7 +20,7 @@ export default function Effect2() {
 
 	return (
 		<>
-			<div className="props">
+			<div class="props">
 				<button onClick={updateName}>Update Name</button>
 			</div>
 		</>

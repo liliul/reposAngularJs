@@ -108,13 +108,13 @@ function App() {
 
       <br />
 
-      <div className="props">
+      <div class="props">
         <TestandoCreateEffect />
       </div>
 
       <br />
 
-      <div className="props">
+      <div class="props">
         <Effect2 />
       </div>
     </>

@@ -23,7 +23,7 @@ function Page1() {
 
             <h1>Testando Router no Solid JS</h1>
 
-            <ul style="list-style: none;" className="props">
+            <ul style="list-style: none;" class="props">
                 <For each={listaNomes()}>
                     {(list, index) => (
                         <li data-id={`${index()}`}>
