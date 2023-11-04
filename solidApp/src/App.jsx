@@ -23,6 +23,10 @@ import Effect2 from './components/CreateEffect2';
 function App() {
   const [count, setCount] = createSignal(0)
 
+  function counterFunc() {
+    setCount(count() + 1)
+  }
+
   return (
     <>
       <MetaProvider>
@@ -51,7 +55,7 @@ function App() {
       </div>
       <h1>Vite + Solid</h1>
       <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={counterFunc}>
           count is {count()}
         </button>
         <p>
