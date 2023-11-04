@@ -19,6 +19,7 @@ const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 import { Bookshelf } from './components/api/Main';
 import TestandoCreateEffect from './components/CreateEffect';
 import Effect2 from './components/CreateEffect2';
+import CounterX from './components/CreateSignal3';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -120,6 +121,12 @@ function App() {
 
       <div class="props">
         <Effect2 />
+      </div>
+
+      <br />
+
+      <div class="props">
+        <CounterX count='Multiplicar' />
       </div>
     </>
   )
