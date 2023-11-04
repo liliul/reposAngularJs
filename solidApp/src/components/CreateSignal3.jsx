@@ -1,8 +1,8 @@
 import { createSignal } from 'solid-js';
 
-function CounterX({count}) {
-	const [counterX, setCounterX] = createSignal(0);
-	const resProps = count.counterX || 'Iniciar';
+export default function CounterX({count}) {
+	const [counterX, setCounterX] = createSignal(1);
+	const resProps = count;
 
 	function handleCount() {
 		setCounterX(counterX() * 2);
@@ -11,12 +11,10 @@ function CounterX({count}) {
 	return (
 		<>
 			<div>
-				<p>{ resProps }</p>
+				<p>{counterX()}</p>
 
-				<button onClick={handleCount}>Multiplicar</button>
+				<button onClick={handleCount}>{resProps}</button>
 			</div>
 		</>
 	);
 }
-
-export default CounterX;
