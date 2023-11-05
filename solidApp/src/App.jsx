@@ -10,7 +10,7 @@ import TestandoCreateSignal from './components/CreateSignal';
 import Form from './components/CreateSignal2';
 import Parent from './components/Props2';
 
-const UserApi = lazy(() => import('./components/novaPage/FetchUser'));
+const UserApi = lazy(() => import('./components/fetchApiSolidjs/FetchUser'));
 
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
