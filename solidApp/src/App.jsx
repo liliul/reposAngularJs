@@ -18,6 +18,7 @@ import { Bookshelf } from './components/api/Main';
 import TestandoCreateEffect from './components/CreateEffect';
 import Effect2 from './components/CreateEffect2';
 import CounterX from './components/CreateSignal3';
+import GithubApiUser from './components/fetchApiSolidjs/githubApiUser';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -126,6 +127,10 @@ function App() {
       <div class="props">
         <CounterX count='Multiplicar' />
       </div>
+
+      <br />
+      
+      <GithubApiUser />
     </>
   )
 }
