@@ -12,8 +12,6 @@ import Parent from './components/Props2';
 
 const UserApi = lazy(() => import('./components/novaPage/FetchUser'));
 
-// testando router do solidjs
-// import Page1 from './components/testeRouter/Page1';
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
 import { Bookshelf } from './components/api/Main';
