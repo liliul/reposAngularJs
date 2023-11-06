@@ -19,6 +19,7 @@ import TestandoCreateEffect from './components/CreateEffect';
 import Effect2 from './components/CreateEffect2';
 import CounterX from './components/CreateSignal3';
 import GithubApiUser from './components/fetchApiSolidjs/githubApiUser';
+import Mycount from './components/CreateSignal4';
 
 function App() {
   const [count, setCount] = createSignal(0)
@@ -131,6 +132,12 @@ function App() {
       <br />
       
       <GithubApiUser />
+      
+      <br />
+
+      <div class="props">
+        <Mycount />
+      </div>
     </>
   )
 }
