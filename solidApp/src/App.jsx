@@ -39,7 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<h3>Home App</h3>} />
         <Route path="/page1" component={Page1} />
-        <Route path="/outlet" element={<div class="props">Outlet <Outlet /></div>} />
+        <Route path="/outlet" element={<div class="props">Outlet <Mycount /></div>} />
         <Route path="/element" element={<div>Naruto Sasuke Kakashi Itachi</div>} />
 
         <Route path="/userapi" component={UserApi} />
@@ -132,12 +132,7 @@ function App() {
       <br />
       
       <GithubApiUser />
-      
-      <br />
 
-      <div class="props">
-        <Mycount />
-      </div>
     </>
   )
 }
