@@ -1,3 +1,9 @@
+## Nodejs Version
+
+```zsh
+nvm use # or less .nvmrc
+```
+
 ## Usage
 
 ```bash
