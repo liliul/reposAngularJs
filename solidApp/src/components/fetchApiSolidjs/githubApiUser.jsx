@@ -1,6 +1,8 @@
 import { createResource, Show } from 'solid-js';
 import { MetaProvider, Title } from '@solidjs/meta';
 
+import LoadingGithubUser from '../loadings/githubUser';
+
 
 function UserApi() {
 	const [data] = createResource(ApiGithub)
@@ -13,7 +15,7 @@ function UserApi() {
                   
             </MetaProvider>
 
-			<Show when={data()} fallback={<p>...GithubApiUser</p>}>
+			<Show when={data()} fallback={<LoadingGithubUser />}>
 				<div class="props">
 
 					<header>
