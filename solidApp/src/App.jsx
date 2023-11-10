@@ -5,20 +5,21 @@ import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import MyComponent from './components/Props1';
-import TestandoCreateSignal from './components/CreateSignal';
-import Form from './components/CreateSignal2';
-import Parent from './components/Props2';
+import MainComponents from './Main';
+// import MyComponent from './components/Props1';
+// import TestandoCreateSignal from './components/CreateSignal';
+// import Form from './components/CreateSignal2';
+// import Parent from './components/Props2';
 
 const UserApi = lazy(() => import('./components/fetchApiSolidjs/FetchUser'));
 
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
-import { Bookshelf } from './components/api/Main';
-import TestandoCreateEffect from './components/CreateEffect';
-import Effect2 from './components/CreateEffect2';
-import CounterX from './components/CreateSignal3';
-import GithubApiUser from './components/fetchApiSolidjs/githubApiUser';
+// import { Bookshelf } from './components/api/Main';
+// import TestandoCreateEffect from './components/CreateEffect';
+// import Effect2 from './components/CreateEffect2';
+// import CounterX from './components/CreateSignal3';
+// import GithubApiUser from './components/fetchApiSolidjs/githubApiUser';
 import Mycount from './components/CreateSignal4';
 
 function App() {
@@ -66,8 +67,8 @@ function App() {
       <p class="read-the-docs">
         Click on the Vite and Solid logos to learn more
       </p>
-
-      <div>
+      <MainComponents />
+      {/*<div>
         <MyComponent name="Solid props javascript" />
       </div>
 
@@ -131,7 +132,7 @@ function App() {
 
       <br />
       
-      <GithubApiUser />
+      <GithubApiUser />*/}
 
     </>
   )
