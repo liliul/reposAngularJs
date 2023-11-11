@@ -1,5 +1,5 @@
 import { createSignal, lazy } from 'solid-js'
-import { Routes, Route, A, Outlet } from "@solidjs/router";
+import { Routes, Route, A } from "@solidjs/router";
 import { MetaProvider, Title } from '@solidjs/meta';
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
@@ -57,7 +57,7 @@ function App() {
       <p class="read-the-docs">
         Click on the Vite and Solid logos to learn more
       </p>
-      
+
       <MainComponents />
 
     </>
