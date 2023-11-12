@@ -73,3 +73,9 @@ button:focus-visible {
   border-radius: 8px;
   padding: 0.6em 1.2em;
 }
+
+.loading {
+  color: purple;
+  font-family: 'Fira Code';
+  font-size: 1.4rem;
+}
