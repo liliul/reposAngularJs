@@ -1,4 +1,4 @@
-import { A, Outlet } from "@solidjs/router";
+import { A } from "@solidjs/router";
 
 import MyComponent from './components/Props1';
 import TestandoCreateSignal from './components/CreateSignal';
@@ -37,8 +37,6 @@ export default function Main() {
               </div>
 
               <br />
-
-              <Outlet />
 
               <br />
 
