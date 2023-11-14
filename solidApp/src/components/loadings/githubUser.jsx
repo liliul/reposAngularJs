@@ -1,3 +1,8 @@
+/**
+ * 
+ * @returns html loading do githubApiUser
+ */
+
 const GithubUserLoading = () => {
 	return (
 		<>
