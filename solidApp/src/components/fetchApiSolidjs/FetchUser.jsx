@@ -1,6 +1,10 @@
 import { createResource, Show, For } from 'solid-js';
 import { MetaProvider, Title } from '@solidjs/meta';
 
+/**
+ * @function
+ * @returns componente em html com o dado name do github repos
+ * */
 
 function UserApi() {
 	const [data] = createResource(ApiGithub)
@@ -27,6 +31,11 @@ function UserApi() {
 }
 
 export default UserApi;
+
+/**
+ * @function
+ * @returns dados da api do github repositorios
+ * */
 
 async function ApiGithub() {
 	const res = await fetch('https://api.github.com/users/maykbrito/repos')
