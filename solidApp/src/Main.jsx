@@ -10,76 +10,81 @@ import Effect2 from './components/CreateEffect2';
 import CounterX from './components/CreateSignal3';
 import GithubApiUser from './components/fetchApiSolidjs/githubApiUser';
 
+/**
+ * @function
+ * @returns componentes 
+ */
+
 export default function Main() {
-       return (
-        <>
+  return (
+    <>
 
-              <div>
-                <MyComponent name="Solid props javascript" />
-              </div>
+      <div>
+        <MyComponent name="Solid props javascript" />
+      </div>
 
-              <br />
+      <br />
 
-              <div>
-                <TestandoCreateSignal />
-              </div>
+      <div>
+        <TestandoCreateSignal />
+      </div>
 
-              <br />
+      <br />
 
-              <div>
-                <Form />
-              </div>
+      <div>
+        <Form />
+      </div>
 
-              <br />
+      <br />
 
-              <div class="props">
-                <Parent />
-              </div>
+      <div class="props">
+        <Parent />
+      </div>
 
-              <br />
+      <br />
 
-              <br />
+      <br />
 
-              <div class="props">
-                <A href="/element">Personagens de Naruto</A>
-              </div>
+      <div class="props">
+        <A href="/element">Personagens de Naruto</A>
+      </div>
 
-              <br />
+      <br />
 
-              <div class="props">
-                <A href="/userapi">UserApi</A>
-              </div>
+      <div class="props">
+        <A href="/userapi">UserApi</A>
+      </div>
 
-              <br />
+      <br />
 
-              <div class="props">
-                <Bookshelf name="Solid" />
-              </div>
+      <div class="props">
+        <Bookshelf name="Solid" />
+      </div>
 
-              <br />
+      <br />
 
-              <div class="props">
-                <TestandoCreateEffect />
-              </div>
+      <div class="props">
+        <TestandoCreateEffect />
+      </div>
 
-              <br />
+      <br />
 
-              <div class="props">
-                <Effect2 />
-              </div>
+      <div class="props">
+        <Effect2 />
+      </div>
 
-              <br />
+      <br />
 
-              <div class="props">
-                <CounterX count='Multiplicar' />
-              </div>
+      <div class="props">
+        <CounterX count='Multiplicar' />
+      </div>
 
-              <br />
-              
-              <GithubApiUser />
-                
-        </> 
+      <br />
 
-       )
+      <GithubApiUser />
+
+    </>
+
+  )
 
 }
