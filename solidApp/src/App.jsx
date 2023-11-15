@@ -11,6 +11,12 @@ import Mycount from './components/CreateSignal4';
 const UserApi = lazy(() => import('./components/fetchApiSolidjs/FetchUser'));
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
 
+/**
+ * @function
+ * @returns rotas e componentes
+ * 
+ * @description componenete pai que retorna as rotas de paginas e principal componente 
+ * */
 
 function App() {
   const [count, setCount] = createSignal(0)
