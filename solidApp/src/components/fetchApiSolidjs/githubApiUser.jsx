@@ -3,6 +3,10 @@ import { MetaProvider, Title } from '@solidjs/meta';
 
 import LoadingGithubUser from '../loadings/githubUser';
 
+/**
+ * @function
+ * @returns html renderizado com infos da api github
+ * */
 
 function UserApi() {
 	const [data] = createResource(ApiGithub)
@@ -39,6 +43,10 @@ function UserApi() {
 
 export default UserApi;
 
+/**
+ * @function
+ * @returns a api do github informações do usuario
+ * */
 async function ApiGithub() {
 	const res = await fetch('https://api.github.com/users/maykbrito')
 	return res.json();
