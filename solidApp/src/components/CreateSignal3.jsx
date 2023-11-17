@@ -1,5 +1,10 @@
 import { createSignal } from 'solid-js';
 
+/**
+ * @function
+ * @returns componente multiplica a cada click
+ * */
+
 export default function CounterX({count}) {
 	const [counterX, setCounterX] = createSignal(1);
 	const resProps = count;
