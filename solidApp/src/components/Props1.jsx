@@ -1,3 +1,5 @@
+import { SiPreact } from 'solid-icons/si'
+
 /**
  * 
  * @param {string} props 
@@ -5,7 +7,7 @@
  */
 
 function MyComponent(props) {
-    return <div class="props">Nova {props.name}</div>;
+    return <div class="props">Nova <SiPreact /> {props.name}</div>;
 }
 
 export default MyComponent;

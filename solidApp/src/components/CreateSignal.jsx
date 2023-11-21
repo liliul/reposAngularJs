@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import { TbClick } from 'solid-icons/tb';
 
 function TestandoCreateSignal() {
     const [greeting, setGreeting] = createSignal("");
@@ -7,7 +8,7 @@ function TestandoCreateSignal() {
     return (
         <>
             <section onClick={() => setGreeting("CreateSignal")}>
-                Click: {greeting}
+               <TbClick /> Click: {greeting}
             </section>
         </>
     )
