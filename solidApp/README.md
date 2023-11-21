@@ -1,15 +1,25 @@
-## Nodejs Version
+### Nodejs Version
 
 ```zsh
 nvm use # or less .nvmrc
 ```
 
-## Usage
+### Usage
 
 ```bash
 $ npm install # or pnpm install or yarn install
 ```
 
+### Adicionar solid-icons
+```zsh
+npm install solid-icons --save # or yarn add solid-icons
+```
+#### Link para site para escolher os icons [solid-icons-link](https://solid-icons.vercel.app/)
+
+#### Link para o repo no github [solid-icons-repo](https://github.com/x64Bits/solid-icons)
+
+
+<br />
 ### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
 
 ## Available Scripts
