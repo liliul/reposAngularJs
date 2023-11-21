@@ -1,4 +1,5 @@
 import { A } from "@solidjs/router";
+import { TbBrandSolidjs } from "solid-icons/tb";
 
 import MyComponent from './components/Props1';
 import TestandoCreateSignal from './components/CreateSignal';
@@ -82,6 +83,12 @@ export default function Main() {
       <br />
 
       <GithubApiUser />
+
+      <br />
+
+      <div class="props">
+        <TbBrandSolidjs size={24} color="#2c4f7c" />
+      </div>
 
     </>
 
