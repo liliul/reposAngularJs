@@ -1,14 +1,35 @@
-### Nodejs Version
+### Link sobre mais do SolidJS [Solid Website](https://solidjs.com) E [Discord](https://discord.com/invite/solidjs)
+
+<br />
+
+### Versão do Nodejs 
 
 ```zsh
 nvm use # or less .nvmrc
 ```
 
-### Usage
+### Instalar pacotes
 
 ```bash
-$ npm install # or pnpm install or yarn install
+npm install # or pnpm install or yarn install
 ```
+
+### Iniciar projeto
+```zsh
+npm run dev # or yarn dev
+```
+<br />
+
+## Para mais informações para iniciar o projeto com node-js
+#### `less package.json`
+
+### Localhost do projeto [http://localhost:5173](http://localhost:5173)
+
+### Deployment [documentação](https://vitejs.dev/guide/static-deploy.html)
+
+<br />
+
+## Eco-sistema do solid-js
 
 ### Adicionar solid-icons
 ```zsh
@@ -17,28 +38,3 @@ npm install solid-icons --save # or yarn add solid-icons
 #### Link para site para escolher os icons [solid-icons-link](https://solid-icons.vercel.app/)
 
 #### Link para o repo no github [solid-icons-repo](https://github.com/x64Bits/solid-icons)
-
-
-<br />
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
