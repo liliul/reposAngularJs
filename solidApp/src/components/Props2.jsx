@@ -1,3 +1,7 @@
+/**
+ * @function
+ * @returns componente Label messagem dinamica com props
+*/
 const Parent = () => (
     <section>
       <Label greeting="Props2 () => Sonic">
@@ -5,7 +9,14 @@ const Parent = () => (
       </Label>
     </section>
   );
-  
+
+
+/**
+ * @function
+ * @param {string} props
+ *
+ * @returns feature props no solidjs
+*/
   const Label = (props) => (
     <>
       <div>{props.greeting}</div>
