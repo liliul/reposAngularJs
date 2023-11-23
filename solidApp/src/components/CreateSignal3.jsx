@@ -1,4 +1,13 @@
 import { createSignal } from 'solid-js';
+import { styled } from "solid-styled-components";
+
+// Style Object
+const Btn = styled("button")(props => ({
+	fontSize: props.size + "px",
+	borderRadius: props.brSize + "px",
+	border: "2px solid green",
+	color: "yellow"
+}));
 
 /**
  * @function
@@ -18,7 +27,7 @@ export default function CounterX({count}) {
 			<div>
 				<p>{counterX()}</p>
 
-				<button onClick={handleCount}>{resProps}</button>
+				<Btn size={25} brSize={12} onClick={handleCount}>{resProps}</Btn>
 			</div>
 		</>
 	);
