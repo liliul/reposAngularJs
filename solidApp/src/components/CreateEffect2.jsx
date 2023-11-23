@@ -1,6 +1,13 @@
 import { createEffect } from 'solid-js';
 import { createStore } from "solid-js/store";
 
+import { styled } from "solid-styled-components";
+
+const Btn = styled("button")`
+  border-radius: 8px;
+  border: 1px solid purple;
+`;
+
 export default function Effect2() {
 	const [nomeInfo, setNomeInfo] = createStore({
 		nome: {
@@ -21,7 +28,7 @@ export default function Effect2() {
 	return (
 		<>
 			<div class="props">
-				<button onClick={updateName}>Update Name</button>
+				<Btn onClick={updateName}>Update Name</Btn>
 			</div>
 		</>
 	)
