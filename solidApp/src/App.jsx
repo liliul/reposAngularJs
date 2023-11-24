@@ -1,6 +1,8 @@
 import { createSignal, lazy } from 'solid-js'
 import { Routes, Route, A } from "@solidjs/router";
 import { MetaProvider, Title } from '@solidjs/meta';
+import { css } from "solid-styled-components";
+
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,6 +12,13 @@ import Mycount from './components/CreateSignal4';
 
 const UserApi = lazy(() => import('./components/fetchApiSolidjs/FetchUser'));
 const Page1 = lazy(() => import('./components/testeRouter/Page1'));
+
+
+// solid-styled-components
+const countButton = css`
+  color: tomato;
+  border: 1px solid tomato;
+`;
 
 /**
  * @function
@@ -53,7 +62,7 @@ function App() {
       </div>
       <h1>Vite + Solid</h1>
       <div class="card">
-        <button onClick={counterFunc}>
+        <button onClick={counterFunc} class={countButton}>
           count is {count()}
         </button>
         <p>
