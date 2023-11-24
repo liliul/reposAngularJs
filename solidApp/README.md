@@ -38,3 +38,24 @@ npm install solid-icons --save # or yarn add solid-icons
 #### Link para site para escolher os icons [solid-icons-link](https://solid-icons.vercel.app/)
 
 #### Link para o repo no github [solid-icons-repo](https://github.com/x64Bits/solid-icons)
+
+<hr />
+
+### Adicionar solid-styled-components
+```zsh
+npm install solid-styled-components
+```
+#### Link para o repo github [solid-styled-components](https://github.com/solidjs/solid-styled-components)
+
+```zsh
+// exemplo de uso
+
+import { styled } from "solid-styled-components";
+
+const Btn = styled("button")`
+  border-radius: ${props => props.size}px;
+`;
+
+<Btn size={20} />;
+```
+<hr />
