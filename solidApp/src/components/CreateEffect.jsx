@@ -1,4 +1,13 @@
 import { createEffect, createSignal } from "solid-js";
+import { css } from "solid-styled-components";
+
+
+// solid-styled-components Style Objetc
+const h3style = css({
+    color: "blue",
+    fontSize: 30 + "px"
+
+});
 
 /**
  * @function 
@@ -23,7 +32,7 @@ export default function TestandoCreateEffect() {
 
     return (
         <>
-            <h3>CreateEffect SolidJS</h3>
+            <h3 class={h3style}>CreateEffect SolidJS</h3>
         </>
     )
 }
