@@ -5,8 +5,8 @@ import { arrowDown } from "solid-heroicons/solid-mini";
 
 export const HeroIcons = () => (
   <>
-    <Icon path={arrowLeft} style="width: 24px; color: blue" />
-    <Icon path={arrowRight} style="width: 24px; color: green" />
-    <Icon path={arrowDown} style="width: 20px; color: yellow" />
+    <Icon path={arrowLeft} style="width: 24px; color: purple" />
+    <Icon path={arrowRight} style="width: 24px; color: tomato" />
+    <Icon path={arrowDown} style="width: 20px; color: #DDD" />
   </>
 );
