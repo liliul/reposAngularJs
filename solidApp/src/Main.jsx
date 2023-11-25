@@ -10,6 +10,7 @@ import TestandoCreateEffect from './components/CreateEffect';
 import Effect2 from './components/CreateEffect2';
 import CounterX from './components/CreateSignal3';
 import GithubApiUser from './components/fetchApiSolidjs/githubApiUser';
+import { HeroIcons } from './components/utils/HeroIcons';
 
 /**
  * @function
@@ -88,6 +89,12 @@ export default function Main() {
 
       <div class="props">
         <TbBrandSolidjs size={24} color="#2c4f7c" />
+      </div>
+
+      <br />
+
+      <div class="props">
+        <HeroIcons />
       </div>
 
     </>
