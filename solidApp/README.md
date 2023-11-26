@@ -59,3 +59,27 @@ const Btn = styled("button")`
 <Btn size={20} />;
 ```
 <hr />
+
+### Adicionar solid-heroicons
+```zsh
+npm install solid-heroicons
+```
+#### Link para o repo github [solid-heroicons](https://github.com/amoutonbrady/solid-heroicons)
+
+```zsh
+// exemplo de uso
+
+import { Icon } from "solid-heroicons";
+import { arrowLeft } from "solid-heroicons/solid";
+import { arrowRight } from "solid-heroicons/outline";
+import { arrowDown } from "solid-heroicons/solid-mini";
+
+const HeroIcons = () => (
+  <>
+    <Icon path={arrowLeft} style="width: 24px; color: tomato" />
+    <Icon path={arrowRight} style="width: 24px; color: purple" />
+    <Icon path={arrowDown} style="width: 20px; color: #DDD" />
+  </>
+);
+```
+<hr />
