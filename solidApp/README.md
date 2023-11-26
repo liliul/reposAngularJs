@@ -31,6 +31,38 @@ npm run dev # or yarn dev
 
 ## Eco-sistema do solid-js
 
+### Adicionar solid-router
+```zsh
+npm install @solidjs/router
+```
+#### Link para o repo github [solid-router](https://github.com/solidjs/solid-router)
+
+```zsh
+// exemplo de uso 
+
+import { Routes, Route } from "@solidjs/router";
+
+import Home from "./pages/Home";
+import Users from "./pages/Users";
+
+export default function App() {
+  return (
+    <>
+      <h1>My Site with Lots of Pages</h1>
+      <Routes>
+        <Route path="/users" component={Users} />
+        <Route path="/" component={Home} />
+        <Route
+          path="/about"
+          element={<div>This site was made with Solid</div>}
+        />
+      </Routes>
+    </>
+  );
+}
+```
+<hr />
+
 ### Adicionar solid-icons
 ```zsh
 npm install solid-icons --save # or yarn add solid-icons
