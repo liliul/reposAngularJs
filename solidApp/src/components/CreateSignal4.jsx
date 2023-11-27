@@ -7,7 +7,9 @@ export default function myCount() {
 		setMycount(mycount => mycount + 1)
 	},1000)
 
+	console.log('In',Interval)
+	
 	onCleanup(() => clearInterval(Interval));
 
-	return <div>SetInterval => {mycount()}</div>;
+	return <div class={Interval ? 'mudaCor' : ''}>SetInterval => {mycount()}</div>;
 }
