@@ -115,3 +115,29 @@ const HeroIcons = () => (
 );
 ```
 <hr />
+
+### Adicionar solid-meta
+```zsh
+npm install @solidjs/meta
+```
+
+#### Link para o repo github [solid-meta](https://github.com/solidjs/solid-meta)
+
+```zsh
+// exemplo de uso
+
+import { MetaProvider, Title, Link, Meta } from '@solidjs/meta';
+
+const App = () => (
+  <MetaProvider>
+    <div class="Home">
+      <Title>Title of page</Title>
+      <Link rel="canonical" href="http://solidjs.com/" />
+      <Meta name="example" content="whatever" />
+      // ...
+    </div>
+  </MetaProvider>
+);
+```
+
+<hr />
