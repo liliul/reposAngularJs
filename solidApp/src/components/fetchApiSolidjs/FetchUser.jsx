@@ -1,5 +1,6 @@
 import { createResource, Show, For } from 'solid-js';
 import { MetaProvider, Title } from '@solidjs/meta';
+import LoadFetchApiUser from '../loadings/fetchApiUser';
 
 /**
  * @function
@@ -12,12 +13,12 @@ function UserApi() {
 	return (
 		<>
 			<MetaProvider>
-                
-                  <Title>FetchUser</Title>
-                  
-            </MetaProvider>
 
-			<Show when={data()} fallback={<p>...Loading</p>}>
+				<Title>FetchUser</Title>
+
+			</MetaProvider>
+
+			<Show when={data()} fallback={<LoadFetchApiUser />}>
 				<div class="props">
 					<For each={data()}>
 						{(dados) => (
@@ -25,7 +26,7 @@ function UserApi() {
 						)}
 					</For>
 				</div>
-			</Show>			
+			</Show>
 		</>
 	)
 }
