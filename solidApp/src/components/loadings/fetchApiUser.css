@@ -1,19 +1,24 @@
 .div-loading {
+    display: grid;
+    place-items: center;
+    z-index: 999;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
     width: 55px;
     height: 55px;
+    margin: -40px 0 0 -60px;
 
     border-radius: 50%;
     box-shadow: 2px 2px 5px white;
+    background-color: black;
 
-    animation: fade 2s;
+    animation: rotate 4s linear infinite;
 }
 
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
     }
 }
