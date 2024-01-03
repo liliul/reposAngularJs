@@ -1,5 +1,14 @@
 ---
+const tituloPagina = "Sobre Blog Astro";
 
+const identidade = {
+  nome: "Naruto Uzumaki",
+  pais: "Konoha",
+  ocupacao: "Personagem do anime de Naruto",
+  hobbies: ["Treinar jutsu", "observar pássaros", "Futbool"],
+};
+
+const habilidades = ["HTML", "CSS", "JavaScript", "React", "Astro", "Escrever Documentação"];
 ---
 
 <html lang="pt">
@@ -8,17 +17,32 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Blog Astro Sobre</title>
+        <title>{tituloPagina}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <hr />
 
-		<h1>Sobre Mim</h1>
+		<h1>{tituloPagina}</h1>
         <h2>... e meu novo site Astro!</h2>
 
         <p>Estou resolvendo o tutorial introdutório do Astro. Esta é a segunda página no meu website, e é a primeira que eu mesmo construí!</p>
 
         <p>Este site será atualizado enquanto eu completo mais desse tutorial, então continue verificando e veja como minha jornada está indo!</p>
-	</body>
+        
+        <br>
+
+        <p>Aqui estão alguns fatos sobre mim:</p>
+        <ul>
+        <li>Meu nome é {identidade.nome}.</li>
+        <li>Eu moro no {identidade.pais} e eu trabalho como uma {identidade.ocupacao}.</li>
+            {identidade.hobbies.length >= 2 &&
+                <li>Dois dos meus hobbies são: {identidade.hobbies[0]} and {identidade.hobbies[1]}</li>
+            }
+        </ul>
+        <p>Minhas habilidades são:</p>
+        <ul>
+            {habilidades.map((habilidade) => <li>{habilidade}</li>)}
+        </ul>
+    </body>
 </html>
