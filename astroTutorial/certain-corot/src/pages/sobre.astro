@@ -9,6 +9,10 @@ const identidade = {
 };
 
 const habilidades = ["HTML", "CSS", "JavaScript", "React", "Astro", "Escrever Documentação"];
+
+const feliz = true;
+const terminado = false;
+const meta = 3;
 ---
 
 <html lang="pt">
@@ -44,5 +48,14 @@ const habilidades = ["HTML", "CSS", "JavaScript", "React", "Astro", "Escrever Do
         <ul>
             {habilidades.map((habilidade) => <li>{habilidade}</li>)}
         </ul>
+
+        <br>
+        <hr>
+
+        {feliz && <p>Estou feliz em estar aprendendo Astro!</p>}
+
+        {terminado && <p>Eu terminei esse tutorial!</p>}
+
+        {meta === 3 ? <p>Minha meta é terminar em 3 dias.</p> : <p>Minha meta não é em 3 dias.</p>}
     </body>
 </html>
