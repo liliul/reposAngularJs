@@ -1,0 +1,6 @@
+---
+const { frontmatter } = Astro.props;
+---
+<h1>{frontmatter.titulo}</h1>
+<p>Escrito por {frontmatter.autor}</p>
+<slot />
