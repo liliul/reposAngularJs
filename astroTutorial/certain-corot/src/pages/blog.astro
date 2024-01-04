@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Navegacao from '../components/Navegacao.astro';
+import Rodape from '../components/Rodape.astro';
 		
 ---
 
@@ -13,7 +14,7 @@ import Navegacao from '../components/Navegacao.astro';
 		<title>Blog Astro Blog</title>
 	</head>
 	<body>
-		
+
 		<Navegacao /> 
         <hr />
         
@@ -27,5 +28,8 @@ import Navegacao from '../components/Navegacao.astro';
             <li><a href="/postagens/post-2/">Postagem 2</a></li>
             <li><a href="/postagens/post-3/">Postagem 3</a></li>
         </ul>
+
+		<hr>
+		<Rodape />
 	</body>
 </html>

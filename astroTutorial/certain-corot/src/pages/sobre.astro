@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Navegacao from '../components/Navegacao.astro';
+import Rodape from '../components/Rodape.astro';
 
 const tituloPagina = "Sobre Blog Astro";
 
@@ -40,7 +41,7 @@ const corHabilidade = "navy";
         </style>
 	</head>
 	<body>
-        
+
         <Navegacao />
         <hr />
 
@@ -74,5 +75,8 @@ const corHabilidade = "navy";
         {terminado && <p>Eu terminei esse tutorial!</p>}
 
         {meta === 3 ? <p>Minha meta é terminar em 3 dias.</p> : <p>Minha meta não é em 3 dias.</p>}
+
+        <hr>
+        <Rodape />
     </body>
 </html>
