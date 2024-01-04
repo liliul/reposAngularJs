@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/LayoutPostMarkdown.astro
 title: Minha Terceira Postagem no Blog
 autor: Aluno de Astro
 descricao: "Eu tive alguns desafios, mas perguntar na comunidade realmente me ajudou!"

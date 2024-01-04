@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/LayoutPostMarkdown.astro
 titulo: Minha Segunda Postagem no Blog
 autor: Aluno de Astro
 descricao: "Após aprender um pouco sobre Astro, eu não consegui parar!"
