@@ -3,6 +3,8 @@ import '../styles/global.css';
 import Cabecalho from '../components/Cabecalho.astro';
 import Rodape from '../components/Rodape.astro';
 
+const { tituloPagina } = Astro.props;
+
 ---
 
 <html lang="pt">
@@ -17,6 +19,8 @@ import Rodape from '../components/Rodape.astro';
 
 		<Cabecalho />
 		<h1>Iniciando com Astro</h1>
+
+        <slot />
 		<hr />
 
 		<Rodape />
