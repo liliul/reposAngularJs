@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-import Navegacao from '../components/Navegacao.astro';
 import Rodape from '../components/Rodape.astro';
+import Cabecalho from '../components/Cabecalho.astro';
 		
 ---
 
@@ -15,7 +15,7 @@ import Rodape from '../components/Rodape.astro';
 	</head>
 	<body>
 
-		<Navegacao /> 
+		<Cabecalho /> 
         <hr />
         
         <h1>Meu Blog de Aprendizado sobre Astro</h1>
@@ -31,5 +31,9 @@ import Rodape from '../components/Rodape.astro';
 
 		<hr>
 		<Rodape />
+
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
