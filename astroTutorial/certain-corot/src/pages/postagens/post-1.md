@@ -9,9 +9,6 @@ imagem:
     alt: 'A logo completa do Astro.'
 tags: ["astro", "blogueirando", "aprendendo em público"]
 ---
-# Minha Primeira Postagem no Blog
-
-Publicado em: 2022-07-01
 
 Bem-vindo ao meu _novo blog_ sobre aprendendo Astro! Aqui, eu irei compartilhar minha jornada de aprendizado enquanto eu construo um novo website.
 
