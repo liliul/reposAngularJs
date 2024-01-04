@@ -20,5 +20,11 @@ import Rodape from '../components/Rodape.astro';
 		<hr />
 
 		<Rodape />
+
+		<script>
+			document.querySelector('.hamburguer').addEventListener('click', () => {
+			  document.querySelector('.links-nav').classList.toggle('expandido');
+			});
+		</script>
 	</body>
 </html>
