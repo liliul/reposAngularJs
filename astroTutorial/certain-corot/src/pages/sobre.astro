@@ -13,6 +13,9 @@ const habilidades = ["HTML", "CSS", "JavaScript", "React", "Astro", "Escrever Do
 const feliz = true;
 const terminado = false;
 const meta = 3;
+
+const corH1 = "purple"
+const corHabilidade = "navy";
 ---
 
 <html lang="pt">
@@ -22,6 +25,16 @@ const meta = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
         <title>{tituloPagina}</title>
+        <style define:vars={{corHabilidade,corH1}}>
+            h1 {
+                color: var(--corH1);
+                font-size: 4rem;
+            }
+            .habilidade {
+                color: var(--corHabilidade);
+                font-weight: bold;
+            }
+        </style>
 	</head>
 	<body>
         <a href="/">Home</a>
@@ -46,7 +59,7 @@ const meta = 3;
         </ul>
         <p>Minhas habilidades são:</p>
         <ul>
-            {habilidades.map((habilidade) => <li>{habilidade}</li>)}
+            {habilidades.map((habilidade) => <li class="habilidade">{habilidade}</li>)}
         </ul>
 
         <br>
