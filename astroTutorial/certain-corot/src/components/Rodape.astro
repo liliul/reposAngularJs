@@ -1,8 +1,10 @@
 ---
-const plataforma = "github";
-const nomeUsuario = "withastro";
+import Social from './Social.astro';
+
 ---
 
 <footer>
-  <p>Aprenda mais sobre meus projetos em <a href={`https://www.${plataforma}.com/${nomeUsuario}`}>{plataforma}</a>!</p>
+    <Social plataforma="twitter" nomeUsuario="astrodotbuild" />
+    <Social plataforma="github" nomeUsuario="withastro" />
+    <Social plataforma="youtube" nomeUsuario="astrodotbuild" />
 </footer>
