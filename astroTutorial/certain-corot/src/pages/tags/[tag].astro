@@ -1,0 +1,19 @@
+---
+import LayoutBase from '../../layouts/LayoutBase.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { tag: "astro" } },
+    { params: { tag: "sucessos" } },
+    { params: { tag: "comunidade" } },
+    { params: { tag: "blogueirando" } },
+    { params: { tag: "contratempos" } },
+    { params: { tag: "aprendendo em público" } },
+  ];
+}
+
+const { tag } = Astro.params;
+---
+<LayoutBase tituloPagina={tag}>
+  <p>Postagens com a tag {tag}</p>
+</LayoutBase>
