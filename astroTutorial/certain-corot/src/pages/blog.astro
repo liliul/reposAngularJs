@@ -1,39 +1,21 @@
 ---
 import '../styles/global.css';
+import LayoutBase from '../layouts/LayoutBase.astro';
 import PostBlog from '../components/PostBlog.astro';
-import Rodape from '../components/Rodape.astro';
-import Cabecalho from '../components/Cabecalho.astro';
 
 const todasPostagens = await Astro.glob('../pages/postagens/*.md');
+const tituloPagina = "Meu Blog de Aprendizado sobre Astro";
 ---
 
-<html lang="pt">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Blog Astro Blog</title>
-	</head>
-	<body>
 
-		<Cabecalho /> 
-        <hr />
-        
-        <h1>Meu Blog de Aprendizado sobre Astro</h1>
-        <p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
 
-        <br>
 
-        <ul>
-			{todasPostagens.map((post) => <PostBlog url={post.url} titulo={post.frontmatter.titulo} />)}
-        </ul>
 
-		<hr>
-		<Rodape />
+<LayoutBase tituloPagina={tituloPagina}>
+	<p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
+	<br>
 
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+	<ul>
+		{todasPostagens.map((post) => <PostBlog url={post.url} titulo={post.frontmatter.titulo} />)}
+	</ul>
+</LayoutBase>
