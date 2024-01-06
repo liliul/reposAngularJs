@@ -17,67 +17,40 @@ const feliz = true;
 const terminado = false;
 const meta = 3;
 
-const corH1 = "purple"
-const corHabilidade = "navy";
 ---
 
-<html lang="pt">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-        <title>{tituloPagina}</title>
-        <style define:vars={{corHabilidade,corH1}}>
-            h1 {
-                color: var(--corH1);
-                font-size: 4rem;
-            }
-            .habilidade {
-                color: var(--corHabilidade);
-                font-weight: bold;
-            }
-        </style>
-	</head>
-	<body>
+<LayoutBase tituloPagina={tituloPagina}>
+    <hr />
 
-        <LayoutBase tituloPagina={tituloPagina}>
-            <hr />
-    
-            <h2>... e meu novo site Astro!</h2>
-    
-            <p>Estou resolvendo o tutorial introdutório do Astro. Esta é a segunda página no meu website, e é a primeira que eu mesmo construí!</p>
-    
-            <p>Este site será atualizado enquanto eu completo mais desse tutorial, então continue verificando e veja como minha jornada está indo!</p>
-            
-            <br>
-    
-            <p>Aqui estão alguns fatos sobre mim:</p>
-            <ul>
-            <li>Meu nome é {identidade.nome}.</li>
-            <li>Eu moro no {identidade.pais} e eu trabalho como uma {identidade.ocupacao}.</li>
-                {identidade.hobbies.length >= 2 &&
-                    <li>Dois dos meus hobbies são: {identidade.hobbies[0]} and {identidade.hobbies[1]}</li>
-                }
-            </ul>
-            <p>Minhas habilidades são:</p>
-            <ul>
-                {habilidades.map((habilidade) => <li class="habilidade">{habilidade}</li>)}
-            </ul>
-    
-            <br>
-            <hr>
-    
-            {feliz && <p>Estou feliz em estar aprendendo Astro!</p>}
-    
-            {terminado && <p>Eu terminei esse tutorial!</p>}
-    
-            {meta === 3 ? <p>Minha meta é terminar em 3 dias.</p> : <p>Minha meta não é em 3 dias.</p>}
-    
-        </LayoutBase>
+    <h2>... e meu novo site Astro!</h2>
 
-        <script>
-			import "../scripts/menu.js";
-		</script>
-    </body>
-</html>
+    <p>Estou resolvendo o tutorial introdutório do Astro. Esta é a segunda página no meu website, e é a primeira que eu mesmo construí!</p>
+
+    <p>Este site será atualizado enquanto eu completo mais desse tutorial, então continue verificando e veja como minha jornada está indo!</p>
+    
+    <br>
+
+    <p>Aqui estão alguns fatos sobre mim:</p>
+    <ul>
+    <li>Meu nome é {identidade.nome}.</li>
+    <li>Eu moro no {identidade.pais} e eu trabalho como uma {identidade.ocupacao}.</li>
+        {identidade.hobbies.length >= 2 &&
+            <li>Dois dos meus hobbies são: {identidade.hobbies[0]} and {identidade.hobbies[1]}</li>
+        }
+    </ul>
+    <p>Minhas habilidades são:</p>
+    <ul>
+        {habilidades.map((habilidade) => <li class="habilidade">{habilidade}</li>)}
+    </ul>
+
+    <br>
+    <hr>
+
+    {feliz && <p>Estou feliz em estar aprendendo Astro!</p>}
+
+    {terminado && <p>Eu terminei esse tutorial!</p>}
+
+    {meta === 3 ? <p>Minha meta é terminar em 3 dias.</p> : <p>Minha meta não é em 3 dias.</p>}
+
+</LayoutBase>
+

@@ -18,9 +18,10 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
+
 <LayoutBase tituloPagina={tag}>
     <p>Postagens com a tag {tag}</p>
     <ul>
         {posts.map((post) => <PostBlog url={post.url} titulo={post.frontmatter.titulo}/>)}
     </ul>
-  </LayoutBase>
+</LayoutBase>
