@@ -4,24 +4,23 @@ import LayoutBase from '../../layouts/LayoutBase.astro';
 
 export async function getStaticPaths() {
   const todasPostagens = await Astro.glob('../postagens/*.md');
+  const tagsUnicas = [...new Set(todasPostagens.map((post) => post.frontmatter.tags).flat())];
   
-  return [
-    { params: { tag: "astro" }, props: {posts: todasPostagens} },
-    { params: { tag: "sucessos" }, props: {posts: todasPostagens} },
-    { params: { tag: "comunidade" }, props: {posts: todasPostagens} },
-    { params: { tag: "blogueirando" }, props: {posts: todasPostagens} },
-    { params: { tag: "contratempos" }, props: {posts: todasPostagens} },
-    { params: { tag: "aprendendo em público" }, props: {posts: todasPostagens} },
-  ];
+  return tagsUnicas.map((tag) => {
+    const postagensFiltradas = todasPostagens.filter((post) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: postagensFiltradas },
+    };
+  });
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const postagensFiltradas = posts.filter((post) => post.frontmatter.tags?.includes(tag));
 ---
 <LayoutBase tituloPagina={tag}>
     <p>Postagens com a tag {tag}</p>
     <ul>
-      {postagensFiltradas.map((post) => <PostBlog url={post.url} titulo={post.frontmatter.titulo}/>)}
+        {posts.map((post) => <PostBlog url={post.url} titulo={post.frontmatter.titulo}/>)}
     </ul>
   </LayoutBase>
