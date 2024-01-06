@@ -83,3 +83,13 @@ h1 {
   }
 
 }
+
+/* Tema dark light */
+html.escuro {
+  background-color: #212121;
+  color: #fff;
+}
+
+.escuro .links-nav a {
+  color: #fff;
+}
