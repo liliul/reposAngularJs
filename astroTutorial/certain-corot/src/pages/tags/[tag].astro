@@ -1,19 +1,27 @@
 ---
+import PostBlog from '../../components/PostBlog.astro';
 import LayoutBase from '../../layouts/LayoutBase.astro';
 
 export async function getStaticPaths() {
+  const todasPostagens = await Astro.glob('../postagens/*.md');
+  
   return [
-    { params: { tag: "astro" } },
-    { params: { tag: "sucessos" } },
-    { params: { tag: "comunidade" } },
-    { params: { tag: "blogueirando" } },
-    { params: { tag: "contratempos" } },
-    { params: { tag: "aprendendo em público" } },
+    { params: { tag: "astro" }, props: {posts: todasPostagens} },
+    { params: { tag: "sucessos" }, props: {posts: todasPostagens} },
+    { params: { tag: "comunidade" }, props: {posts: todasPostagens} },
+    { params: { tag: "blogueirando" }, props: {posts: todasPostagens} },
+    { params: { tag: "contratempos" }, props: {posts: todasPostagens} },
+    { params: { tag: "aprendendo em público" }, props: {posts: todasPostagens} },
   ];
 }
 
 const { tag } = Astro.params;
+const { posts } = Astro.props;
+const postagensFiltradas = posts.filter((post) => post.frontmatter.tags?.includes(tag));
 ---
 <LayoutBase tituloPagina={tag}>
-  <p>Postagens com a tag {tag}</p>
-</LayoutBase>
+    <p>Postagens com a tag {tag}</p>
+    <ul>
+      {postagensFiltradas.map((post) => <PostBlog url={post.url} titulo={post.frontmatter.titulo}/>)}
+    </ul>
+  </LayoutBase>
