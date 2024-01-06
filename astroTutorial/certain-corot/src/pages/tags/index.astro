@@ -1,7 +1,7 @@
 ---
 import LayoutBase from '../../layouts/LayoutBase.astro';
 
-const todasPostagens = await Astro.glob('../posts/*.md');
+const todasPostagens = await Astro.glob('../postagens/*.md');
 const tags = [...new Set(todasPostagens.map((post) => post.frontmatter.tags).flat())];
 const tituloPagina = "Índice de Tags";
 ---
