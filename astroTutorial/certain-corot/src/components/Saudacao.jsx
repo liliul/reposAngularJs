@@ -8,8 +8,8 @@ export default function Saudacao({mensagens}) {
 
   return (
     <div>
-      <h3>{saudacao}! Obrigado por visitar!</h3>
-      <button onClick={() => setSaudacao(mensagemAleatoria())}>
+      <h3 className="text-saudacao">{saudacao}! Obrigado por visitar!</h3>
+      <button className="b-saudacao" onClick={() => setSaudacao(mensagemAleatoria())}>
         Nova Saudação
       </button>
     </div>

@@ -93,3 +93,26 @@ html.escuro {
 .escuro .links-nav a {
   color: #fff;
 }
+
+/* style button saudacao */
+.text-saudacao {
+  background-color: yellow;
+  color: black;
+
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.b-saudacao {
+  padding: 8px 20px;
+  
+  border: none;
+  border-radius: 5px;
+
+  background-color: blue;
+  color: white;
+  
+  font-weight: blod;
+  font-family: "Arial";
+  font-size: 1rem;
+}
