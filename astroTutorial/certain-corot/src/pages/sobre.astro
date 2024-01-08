@@ -1,56 +1,97 @@
 ---
-import '../styles/global.css';
-import LayoutBase from '../layouts/LayoutBase.astro';
+import "../styles/global.css";
+import LayoutBase from "../layouts/LayoutBase.astro";
 
 const tituloPagina = "Sobre Blog Astro";
 
 const identidade = {
-  nome: "Naruto Uzumaki",
-  pais: "Konoha",
-  ocupacao: "Personagem do anime de Naruto",
-  hobbies: ["Treinar jutsu", "observar pássaros", "Futbool"],
+    nome: "Naruto Uzumaki",
+    pais: "Konoha",
+    ocupacao: "Personagem do anime de Naruto",
+    hobbies: ["Treinar jutsu", "observar pássaros", "Futbool"],
 };
 
-const habilidades = ["HTML", "CSS", "JavaScript", "React", "Astro", "Escrever Documentação"];
+const habilidades = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Astro",
+    "Escrever Documentação",
+];
 
 const feliz = true;
 const terminado = false;
 const meta = 3;
 
+const corhabilidades = "royalblue";
+const corUlInfo = "orange";
 ---
+
+<style define:vars={{ corhabilidades, corUlInfo }}>
+    .habilidade {
+        color: var(--corhabilidades);
+    }
+    .ul-info {
+        color: var(--corUlInfo);
+    }
+</style>
 
 <LayoutBase tituloPagina={tituloPagina}>
     <hr />
 
     <h2>... e meu novo site Astro!</h2>
 
-    <p>Estou resolvendo o tutorial introdutório do Astro. Esta é a segunda página no meu website, e é a primeira que eu mesmo construí!</p>
+    <p>
+        Estou resolvendo o tutorial introdutório do Astro. Esta é a segunda
+        página no meu website, e é a primeira que eu mesmo construí!
+    </p>
 
-    <p>Este site será atualizado enquanto eu completo mais desse tutorial, então continue verificando e veja como minha jornada está indo!</p>
-    
-    <br>
+    <p>
+        Este site será atualizado enquanto eu completo mais desse tutorial,
+        então continue verificando e veja como minha jornada está indo!
+    </p>
+
+    <br />
 
     <p>Aqui estão alguns fatos sobre mim:</p>
-    <ul>
-    <li>Meu nome é {identidade.nome}.</li>
-    <li>Eu moro no {identidade.pais} e eu trabalho como uma {identidade.ocupacao}.</li>
-        {identidade.hobbies.length >= 2 &&
-            <li>Dois dos meus hobbies são: {identidade.hobbies[0]} and {identidade.hobbies[1]}</li>
+    <ul class="ul-info">
+        <li>Meu nome é {identidade.nome}.</li>
+        <li>
+            Eu moro no {identidade.pais} e eu trabalho como uma {
+                identidade.ocupacao
+            }.
+        </li>
+        {
+            identidade.hobbies.length >= 2 && (
+                <li>
+                    Dois dos meus hobbies são: {identidade.hobbies[0]} and{" "}
+                    {identidade.hobbies[1]}
+                </li>
+            )
         }
     </ul>
     <p>Minhas habilidades são:</p>
     <ul>
-        {habilidades.map((habilidade) => <li class="habilidade">{habilidade}</li>)}
+        {
+            habilidades.map((habilidade) => (
+                <li class="habilidade">{habilidade}</li>
+            ))
+        }
     </ul>
 
-    <br>
-    <hr>
+    <br />
+    <hr />
 
     {feliz && <p>Estou feliz em estar aprendendo Astro!</p>}
 
     {terminado && <p>Eu terminei esse tutorial!</p>}
 
-    {meta === 3 ? <p>Minha meta é terminar em 3 dias.</p> : <p>Minha meta não é em 3 dias.</p>}
-
+    {
+        meta === 3 ? (
+            <p>Minha meta é terminar em 3 dias.</p>
+        ) : (
+            <p>Minha meta não é em 3 dias.</p>
+        )
+    }
 </LayoutBase>
-
