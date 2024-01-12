@@ -1,4 +1,9 @@
-# Astro Starter Kit: Minimal
+# O astro precisa do nodejs 19 para cima para funcionar
+```sh
+nvm use v20.10.0 #exemplo
+```
+
+### Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
