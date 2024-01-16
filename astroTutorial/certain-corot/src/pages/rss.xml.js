@@ -1,5 +1,10 @@
 import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
+/**
+ * 
+ * @param {object} context 
+ * @returns Informações do astroBlog
+ */
 export async function GET(context) {
   return rss({
     title: 'Aluno de Astro | Blog',
