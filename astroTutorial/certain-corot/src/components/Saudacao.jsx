@@ -1,5 +1,10 @@
 import { useState } from 'preact/hooks';
 
+/**
+ * 
+ * @param {props} mensagens 
+ * @returns {elementHTML} componente button saudação
+ */
 export default function Saudacao({mensagens}) {
 
   const mensagemAleatoria = () => mensagens[(Math.floor(Math.random() * mensagens.length))];
