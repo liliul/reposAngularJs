@@ -1,0 +1,16 @@
+.app-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    .content-div-text .content-img {
+        width: 500px;
+        height: 500px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
