@@ -11,5 +11,5 @@ import { Component } from '@angular/core';
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-
+  cardExit = false;
 }
