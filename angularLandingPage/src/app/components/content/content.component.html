@@ -34,9 +34,11 @@
             <div class="content-div-text">
                 <h1>Lorem ipsum dolor sit amet, consectetur</h1>
                 <p>
-                    adipisicing elit. Voluptatem esse harum reiciendis!
-                    Ea repellat eaque sapiente architecto illo
-                    exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
+                    @for(textNoP of textP; track $index) {
+                        {{textNoP}}
+                    }@empty {
+                        <h3>Nenhum Text para renderizar</h3>
+                    }
                 </p>
             </div>
 
@@ -64,9 +66,11 @@
             <div class="content-div-text">
                 <h1>Lorem ipsum dolor sit amet, consectetur</h1>
                 <p>
-                    adipisicing elit. Voluptatem esse harum reiciendis!
-                    Ea repellat eaque sapiente architecto illo
-                    exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
+                    @for(textNoP of textP; track $index) {
+                        {{textNoP}}
+                    }@empty {
+                        <h3>Nenhum Text para renderizar</h3>
+                    }
                 </p>
             </div>
 

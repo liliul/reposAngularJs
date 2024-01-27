@@ -12,4 +12,13 @@ import { Component } from '@angular/core';
 })
 export class ContentComponent {
   cardExit = false;
+
+  textP = [
+    '---//--- Testando (for) angular 17', 
+    'Voluptatem esse harum reiciendis!',
+    'Ea repellat eaque sapiente architecto illo',
+    'exercitationem reprehenderit beatae,', 
+    'hic quis provident ut ex commodi corporis,',
+    'laudantium ipsam'
+  ];
 }
