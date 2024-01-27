@@ -3,19 +3,59 @@
         <h1>Landing Page</h1>
     </div>
 
-    <div>
-        <ul>
-            <li>Contato</li>
-            <li>Sobre</li>
-            <li>Informação</li>
-        </ul>
-    </div>
+    @switch(linksFooter) {
+        @case ('mostraMenos') {
+            <div>
+                <ul>
+                    <li>Contato</li>
+                    <li>Sobre</li>
+                    <li>Informação</li>
+                </ul>
+            </div>
 
-    <div>
-        <ul>
-            <li>X</li>
-            <li>Youtube</li>
-            <li>Whatsapp</li>
-        </ul>
-    </div>
+            <div>
+                <ul>
+                    <li>X</li>
+                    <li>Youtube</li>
+                    <li>Whatsapp</li>
+                </ul>
+            </div>
+        }
+        @case ('mostraMais') {
+            <div>
+                <ul>
+                    <li>Contato</li>
+                    <li>Sobre</li>
+                    <li>Informação</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>X</li>
+                    <li>Youtube</li>
+                    <li>Whatsapp</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>Naruto Shippuden</li>
+                    <li>Dragon Ball Z</li>
+                    <li>Liga Da Justiça</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>Naruto Uzumaki</li>
+                    <li>Som Goku</li>
+                    <li>Batman</li>
+                </ul>
+            </div>
+        }
+        @default {
+            <h1>Nenhum link do footer para mostrar.</h1>
+        }
+    }
 </footer>
