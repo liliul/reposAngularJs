@@ -1,9 +1,10 @@
 .app-content {
     margin: 15px 0px 15px 0px;
+    padding: 0px 10px 0px 10px;
 
     article {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         place-items: center;
 
         .content-div-text {
@@ -35,6 +36,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        article {
+            .content-div-text {
+                h1 {
+                    font-size: 1.9rem;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
 }
