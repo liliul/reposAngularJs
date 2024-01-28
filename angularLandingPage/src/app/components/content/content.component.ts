@@ -24,4 +24,15 @@ export class ContentComponent {
     'hic quis provident ut ex commodi corporis,',
     'laudantium ipsam'
   ];
+
+  arrayNames = [
+    'Naruto',
+    'Goku',
+    'Sasuke',
+    'Vegeta',
+    'Kakashi',
+    'Itachi',
+    'Madara',
+    'Kisame'
+  ];
 }

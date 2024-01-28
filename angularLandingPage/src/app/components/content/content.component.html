@@ -52,9 +52,11 @@
                 <app-view-text name="Landing Page Com Angular 17" />
 
                 <p>
-                    adipisicing elit. Voluptatem esse harum reiciendis!
-                    Ea repellat eaque sapiente architecto illo
-                    exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
+                    @for(arrayNome of arrayNames; track $index) {
+                        {{ arrayNome }}
+                    }@empty {
+                        <h4>Vazio...</h4>
+                    }
                 </p>
             </div>
 
