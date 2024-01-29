@@ -1,101 +1,128 @@
 <section class="app-content">
     @if(cardExit) {
-        <article>
-            <div class="content-div-text">
-                <app-view-text name="Landing Page Com Angular 17" />
-                <p>
-                    adipisicing elit. Voluptatem esse harum reiciendis!
-                    Ea repellat eaque sapiente architecto illo
-                    exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
-                </p>
-            </div>
+    <article>
+        <div class="content-div-text">
+            <app-view-text name="Landing Page Com Angular 17" />
+            <p>
+                adipisicing elit. Voluptatem esse harum reiciendis!
+                Ea repellat eaque sapiente architecto illo
+                exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
+            </p>
+        </div>
 
-            <div class="content-img">
-                <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
-            </div>
-        </article>
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
+        </div>
+    </article>
 
-        <article>
-            <div class="content-div-text">
-                <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-                <p>
-                    adipisicing elit. Voluptatem esse harum reiciendis!
-                    Ea repellat eaque sapiente architecto illo
-                    exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
-                </p>
-            </div>
+    <article>
+        <div class="content-div-text">
+            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+            <p>
+                adipisicing elit. Voluptatem esse harum reiciendis!
+                Ea repellat eaque sapiente architecto illo
+                exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
+            </p>
+        </div>
 
-            <div class="content-img">
-                <img ngSrc="/assets/undraw_thought_process_re_om58.svg" priority width="400" height="410">
-            </div>
-        </article>
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_thought_process_re_om58.svg" priority width="400" height="410">
+        </div>
+    </article>
     }@else {
-        <article>
-            <div class="content-div-text">
-                <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-                <p>
-                    @for(textNoP of textP; track $index) {
-                        {{textNoP}}
-                    }@empty {
-                        <h3>Nenhum Text para renderizar</h3>
-                    }
-                </p>
+    <article>
+        <div class="content-div-text">
+            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+            <p>
+                @for(textNoP of textP; track $index) {
+                {{textNoP}}
+                }@empty {
+            <h3>Nenhum Text para renderizar</h3>
+            }
+            </p>
+        </div>
+
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
+        </div>
+    </article>
+
+    <article>
+        <div class="content-div-text">
+            <app-view-text name="Landing Page Com Angular 17" />
+
+            <p>
+                @for(arrayNome of arrayNames; track $index) {
+                {{ arrayNome }}
+                }@empty {
+            <h4>Vazio...</h4>
+            }
+            </p>
+        </div>
+
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_thought_process_re_om58.svg" priority width="400" height="410">
+        </div>
+    </article>
+
+    <!-- <article>
+        <div class="content-div-text">
+            <h1>Informações do usuario do Github</h1>
+            <div>
+                @if (userGithub$ | async; as userGithub) {
+
+                @for (user of userGithub; track user.id) {
+                <h1>{{user.name}}</h1>
+                <h3>{{user.description}}</h3>
+                <h3>{{user.html_url}}</h3>
+                }
+                @empty {
+                <h1>usuario do githuv Vazio...</h1>
+                }
+                }
             </div>
+        </div>
 
-            <div class="content-img">
-                <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
-            </div>
-        </article>
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
+        </div>
+    </article> -->
 
-        <article>
-            <div class="content-div-text">
-                <app-view-text name="Landing Page Com Angular 17" />
+    <article>
+        <div class="content-div-text">
+            <app-view-text name="Segunda Landing Page Com Angular 17" />
 
-                <p>
-                    @for(arrayNome of arrayNames; track $index) {
-                        {{ arrayNome }}
-                    }@empty {
-                        <h4>Vazio...</h4>
-                    }
-                </p>
-            </div>
+            <p>
+                adipisicing elit. Voluptatem esse harum reiciendis!
+                Ea repellat eaque sapiente architecto illo
+                exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
+            </p>
+        </div>
 
-            <div class="content-img">
-                <img ngSrc="/assets/undraw_thought_process_re_om58.svg" priority width="400" height="410">
-            </div>
-        </article>
-
-        <article>
-            <div class="content-div-text">
-                <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-                <p>
-                    @for(textNoP of textP; track $index) {
-                        {{textNoP}}
-                    }@empty {
-                        <h3>Nenhum Text para renderizar</h3>
-                    }
-                </p>
-            </div>
-
-            <div class="content-img">
-                <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
-            </div>
-        </article>
-
-        <article>
-            <div class="content-div-text">
-                <app-view-text name="Segunda Landing Page Com Angular 17" />
-
-                <p>
-                    adipisicing elit. Voluptatem esse harum reiciendis!
-                    Ea repellat eaque sapiente architecto illo
-                    exercitationem reprehenderit beatae, hic quis provident ut ex commodi corporis, laudantium ipsam.
-                </p>
-            </div>
-
-            <div class="content-img">
-                <img ngSrc="/assets/undraw_thought_process_re_om58.svg" priority width="400" height="410">
-            </div>
-        </article>
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_thought_process_re_om58.svg" priority width="400" height="410">
+        </div>
+    </article>
     }
+
+    <article>
+        <div class="content-div-text">
+            <h1>Informações do usuario do Github</h1>
+            <div>
+                @for (user of userGithub$; track $index) {
+                <app-view-text [name]="user" />
+                <h1>{{user.name}}</h1>
+                <h3>{{user.description}}</h3>
+                <h3>{{user.html_url}}</h3>
+                }
+                @empty {
+                <h1>usuario do githuv Vazio...</h1>
+                }
+            </div>
+        </div>
+
+        <div class="content-img">
+            <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
+        </div>
+    </article>
 </section>

@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observeble} from 'rxjs';
+import { Observable } from 'rxjs';
 
-interface UserApiGithubInterface {
-  name: string,
-  company: string,
-  location: string,
-  avatar: string
+export interface UserApiGithubInterface {
+  repos: [];
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
 }
 
 @Injectable({
@@ -14,11 +15,11 @@ interface UserApiGithubInterface {
 })
 export class UserGithubService {
   urlApi = 'https://api.github.com/users/';
-  userNameApiGithub = 'maykbrito';
-   
+  userNameApiGithub = 'maykbrito/repos';
+
   constructor(private http: HttpClient) { }
 
-  getApiGithub(): Observeble<UserApiGithubInterface> {
-    return this.http.get<UserApiGithubInterface>(`${urlApi}${userNameApiGithub}`)
+  getApiGithub(): Observable<UserApiGithubInterface> {
+    return this.http.get<UserApiGithubInterface>(`${this.urlApi}${this.userNameApiGithub}`)
   }
 }
