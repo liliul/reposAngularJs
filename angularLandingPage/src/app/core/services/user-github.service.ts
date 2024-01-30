@@ -13,12 +13,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserGithubService {
-  urlApi = 'https://api.github.com/users/';
-  userNameApiGithub = 'maykbrito/repos';
+  private userNameApiGithub = 'maykbrito/repos';
+  private urlApi = `https://api.github.com/users/${this.userNameApiGithub}`;
 
   // constructor(private http: HttpClient) { }
 
   // getApiGithub(): Observable<UserApiGithubInterface> {
-    // return this.http.get<UserApiGithubInterface>(`${this.urlApi}${this.userNameApiGithub}`)
+    // return this.http.get<UserApiGithubInterface>(this.urlApi)
   // }
 }
