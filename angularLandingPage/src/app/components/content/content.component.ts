@@ -1,7 +1,7 @@
 import { NgOptimizedImage, AsyncPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ViewTextComponent } from '../view-text/view-text.component';
-// import { UserGithubService, UserApiGithubInterface } from '../../core/services/user-github.service';
+import { UserGithubService, UserApiGithubInterface } from '../../core/services/user-github.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,6 +11,9 @@ import { Observable } from 'rxjs';
     NgOptimizedImage,
     AsyncPipe,
     ViewTextComponent
+  ],
+  providers: [
+    UserGithubService
   ],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
@@ -39,10 +42,11 @@ export class ContentComponent implements OnInit {
   ];
 
   // connectando com api do github
-  // public userGithub$!: Observable<UserApiGithubInterface>;
-  // constructor(private service: UserGithubService) { }
+  public userGithub$!: Observable<UserApiGithubInterface>;
+
+  constructor(private service: UserGithubService) { }
 
   ngOnInit(): void {
-    // this.userGithub$ = this.service.getApiGithub();
+    this.userGithub$ = this.service.getApiGithub();
   }
 }
