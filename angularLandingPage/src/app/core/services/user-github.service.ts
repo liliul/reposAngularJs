@@ -9,6 +9,7 @@ export interface UserApiGithubInterface {
   avatar_url?: string;
   bio: string;
   location: string;
+  type: string;
 }
 
 @Injectable({
