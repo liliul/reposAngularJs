@@ -44,7 +44,7 @@ export class ContentComponent implements OnInit {
   // connectando com api do github
   public userGithub$!: Observable<UserApiGithubInterface>;
 
-  constructor(private service: UserGithubService) { }
+  constructor(private service: UserGithubService) {console.log(this.userGithub$) }
 
   ngOnInit(): void {
     this.userGithub$ = this.service.getApiGithub();

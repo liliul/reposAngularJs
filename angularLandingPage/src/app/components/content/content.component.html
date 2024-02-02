@@ -65,20 +65,17 @@
         </div>
     </article>
 
-    <!-- <article>
+     <article>
         <div class="content-div-text">
             <h1>Informações do usuario do Github</h1>
             <div>
                 @if (userGithub$ | async; as userGithub) {
-
-                @for (user of userGithub; track user.id) {
-                <h1>{{user.name}}</h1>
-                <h3>{{user.description}}</h3>
-                <h3>{{user.html_url}}</h3>
-                }
-                @empty {
-                <h1>usuario do githuv Vazio...</h1>
-                }
+                    <span>{{userGithub.id}}</span>
+                    <h2>{{userGithub.name}}</h2>
+                    <h3>{{userGithub.bio}}</h3>
+                    <h5>{{userGithub.company}}</h5>
+                    <h5>{{userGithub.location}}</h5>
+                    <img src={{userGithub.avatar_url}} width="64" height="64" />
                 }
             </div>
         </div>
@@ -86,7 +83,7 @@
         <div class="content-img">
             <img ngSrc="/assets/undraw_online_art_re_f1pk.svg" priority width="400" height="410">
         </div>
-    </article> -->
+    </article>
 
     <article>
         <div class="content-div-text">
