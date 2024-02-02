@@ -11,6 +11,9 @@ export interface UserApiGithubInterface {
   location: string;
   type: string;
 }
+export interface ReposGithubInterface {
+  name: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +21,14 @@ export interface UserApiGithubInterface {
 export class UserGithubService {
   private userNameApiGithub = 'maykbrito';
   private urlApi = `https://api.github.com/users/${this.userNameApiGithub}`;
+  private urlRepos = 'https://api.github.com/users/maykbrito/repos'
 
   constructor(private http: HttpClient) { console.log(this.urlApi) }
 
   getApiGithub(): Observable<UserApiGithubInterface> {
     return this.http.get<UserApiGithubInterface>(this.urlApi)
+  }
+  getReposGithub(): Observable<ReposGithubInterface> {
+    return this.http.get<ReposGithubInterface>(this.urlRepos)
   }
 }
