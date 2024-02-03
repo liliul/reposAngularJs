@@ -14,8 +14,12 @@
     	rota post /ini
   	</button>
 
-	<button hx-get="/info" hx-swap="innerHTML">
+	<button hx-get="/info" hx-swap="innerHTML" hx-trigger="load delay:1s">
     	rota get /info
   	</button>
+  	<hr>
+  	<br>
+
+  	 <button hx-post="/store" hx-swap="outerHTML ignoreTitle:true">Store From</button>
 </body>
 </html>
