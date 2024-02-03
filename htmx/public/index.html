@@ -21,5 +21,16 @@
   	<br>
 
   	 <button hx-post="/store" hx-swap="outerHTML ignoreTitle:true">Store From</button>
+
+	<hr>
+	<br>
+
+	<button
+		style="padding:10px 25px;border-radius:6px;background-color:#999;"
+		hx-get="/docker"
+		hx-swap="outerHTML"
+		hx-trigger="load delay:3s"
+		>
+		Docker</button>
 </body>
 </html>

@@ -31,6 +31,11 @@ app.get('/sucessStore', (req, res) => {
 	`)
 })
 
+app.get('/docker', (req, res) => {
+	res.send(`
+		<h1 style="color:blue;font-size: 1.8rem;">Carrengando Container Docker</h1>
+	`)
+})
 app.listen(8080, () => {
 	console.log('port: 8080')
 })
