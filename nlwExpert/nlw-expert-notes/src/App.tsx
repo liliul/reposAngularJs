@@ -1,3 +1,7 @@
 export function App() {
-  return <h1>NLW Expert Notes</h1>
+  return (
+    <h1 className="">
+      Hello world!
+    </h1>
+  )
 }
