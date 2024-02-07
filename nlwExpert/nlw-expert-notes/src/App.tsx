@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import Logo from './assests/Logo.svg'
 import { NewCard } from './components/new-card'
 import { NoteCard } from './components/note-card'
@@ -19,6 +19,8 @@ export function App() {
     return []
   })
 
+  const [search, setSearch] = useState('')
+
   function onNoteCreated(content: string) {
     const newNote = {
       id: crypto.randomUUID(),
@@ -33,6 +35,16 @@ export function App() {
     localStorage.setItem('notes', JSON.stringify(notesArray))
   }
 
+  function handleSearch(event: ChangeEvent<HTMLInputElement>) {
+    const query = event.target.value
+
+    setSearch(query)
+  }
+  
+  const filteredNotes = search != ''
+    ? notes.filter(note => note.content.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+    : notes
+
   return (
     <div className='mx-auto max-w-6xl my-12 space-y-6'>
       <img src={Logo} />
@@ -42,6 +54,7 @@ export function App() {
           type="text"
           placeholder='Busque em suas notas...'
           className='w-full bg-transparent text-3xl font-semibold tracking-light outline-none placeholder:text-slate-500'
+          onChange={handleSearch}
           />
       </form>
 
@@ -51,7 +64,7 @@ export function App() {
        
        <NewCard onNoteCreated={onNoteCreated} />
 
-        {notes.map(note => {
+        {filteredNotes.map(note => {
         return <NoteCard key={note.id} note={note} />
         })}
       </div>
