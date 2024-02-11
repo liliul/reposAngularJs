@@ -6,6 +6,13 @@ Criar container dos banco de dados
 ```bash
 dokcer compose up -d
 ``` 
+Criar .env
+```bash
+// npx prisma init
+
+DATABASE_URL="postgresql://docker:docker@localhost:5432/polls?schema=public"
+```
+
 Iniciar projeto
 ```zsh
 npm run dev
@@ -18,6 +25,15 @@ npx prisma migrate dev // depois nome da tabela
 <br />
 ferramentas
  - prisma studio // npx prisma studio 
+
+<br />
+
+ferramentas do prisma na settings.json do vscode
+```bash
+"[prisma]": {
+    "editor.formatOnSave": true
+}
+```
 
 <br />
 <hr />
