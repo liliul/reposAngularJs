@@ -1,10 +1,13 @@
 ### Projeto NLW-Expert-polls
 
 Versão do no de v20.11.0
+```bash
+npm install
+```
 
 Criar container dos banco de dados
 ```bash
-dokcer compose up -d
+docker compose up -d
 ``` 
 Criar .env
 ```bash
