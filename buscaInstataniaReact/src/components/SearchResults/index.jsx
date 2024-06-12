@@ -1,9 +1,12 @@
 const SearchResults = ({ data }) => {
     if (!data || !data.length) return null
 
-    const resultList = data.map(({ _id, title }) => {
+    const resultList = data.map(({ item, idx }) => {
+        const { _id, title } = item
+        const delay = `${idx + 1}00ms`
+
         return (
-            <li key={_id}>
+            <li key={_id} style={{ '--delay': delay }}>
                 <span>{title}</span>
             </li>
         )
