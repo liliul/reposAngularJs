@@ -13,11 +13,11 @@ module.exports = {
         const { username, password } = req.body;
 
         const [, affectRows] = await connection.query(`
-                INSERT INTO users VALUES (
+                INSERT INTO users (id, username, password)
+                VALUES (
                 DEFAULT, 
                 '${username}', 
-                '${password}',
-                 NOW(), NOW()
+                '${password}'
                 )
             `);
 
