@@ -13,14 +13,14 @@ Configurar insomnia:
 json
 {
 	"username": "liliu",
-	"password": 555
+	"password": "555"
 }
 
 3. POST _.base_url/create
 json
 {
 	"username": "liliu",
-	"password": 555
+	"password": "555"
 }
 
 ```
@@ -45,8 +45,25 @@ Comandos do sequelize-cli:
 
 Mysql docker:
 para criar database: CREATE DATABASE apiNodejs;
+```bash
+create database apiNodejs;
+use apiNodejs;
+
+create table users (
+    id int not null auto_increment,
+    username varchar(30) not null,
+    password varchar(30) not null,
+    primary key (id)
+);
+show tables;
+
+insert into apiNodejs.users (id, username, password) values (default, 'naruto', '222');
+
+select * from users;
+```
 
 Acessar mysql no container docker:
 ```bash
 docker exec -it curso-mysql mysql -uroot -p
+docker inspect nomeDoContainer | grep IPAddress
 ```
