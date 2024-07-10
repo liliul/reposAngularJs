@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import { MapPin, Calendar, ArrowRight, UserRoundPlus, Settings2, X, AtSign, Plus } from 'lucide-react'
+import { MapPin, Calendar, ArrowRight, UserRoundPlus, Settings2, X, AtSign, Plus, User } from 'lucide-react'
 
 import './app.css'
 
@@ -10,6 +10,8 @@ function App() {
     'Gokufirestore@email.com',
     'narutofirestore@email.com'
   ])
+  const [isComfirmTripModalOpen, setIsComfirmTripModalOpen] = useState(false)
+
 
   function openGuestInput() {
     setIsGuestsInputOpen(true)
@@ -47,6 +49,12 @@ function App() {
     const newEmailList = emailsToInvite.filter(email => email !== emailToRemove)
 
     setEmailsToInvite(newEmailList)
+  }
+  function openComfirmModal() {
+    setIsComfirmTripModalOpen(true)
+  }
+  function closeComfirmModal() {
+    setIsComfirmTripModalOpen(false)
   }
 
   return (
@@ -99,15 +107,21 @@ function App() {
                   onClick={openGuestModal}
                   className='flex items-center gap-2 flex-1 text-left'>
                   <UserRoundPlus className='size-5 text-zinc-400' />
-                  <span className='text-lg placeholder-zinc-400 flex-1'>
-                    Quem estara na viagem?
-                  </span>
+                  {emailsToInvite.length > 0 ? (
+                    <span className='text-lg text-zinc-100 flex-1'>
+                      {emailsToInvite.length} pessoas(s) convidado(s)
+                    </span>
+                  ) : (
+                    <span className='text-lg text-zinc-400 flex-1'>
+                      Quem estara na viagem?
+                    </span>
+                  )}
                 </button>
 
                 <div className='m-px h-6 bg-zinc-800'></div>
 
                 <button
-                  onClick={openGuestInput}
+                  onClick={openComfirmModal}
                   className='bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400'>
                   Confirma viagem
                   <ArrowRight className='size-5' />
@@ -171,6 +185,48 @@ function App() {
                   type='submit'
                   className='bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400'>
                   Convidar
+                  <Plus className='size-5' />
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {isComfirmTripModalOpen && (
+          <div className='fixed inset-0 bg-black/60 flex items-center justify-center'>
+            <div className='w-[640px] rounded-xl py-5 px-6 bg-zinc-900 space-y-5'>
+              <div className='space-y-2'>
+                <div className='flex items-center justify-between'>
+                  <h2 className='text-lg font-semibold'>Comfirmar a criação da viagem</h2>
+
+                  <button type="button"
+                    onClick={closeComfirmModal}
+                  >
+                    <X className='size-5 text-zinc-400' />
+                  </button>
+                </div>
+
+                <p className='text-sm text-zinc-400'>
+                  Para concluir a criação da viagem para <span className='font-semibold text-zinc-100'>Rio do sul, BR</span>.
+                </p>
+              </div>
+
+
+              <form onSubmit={adNewEmailToIvite} className='space-y-3'>
+                <div className='h-14 py-4 pl-3 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2'>
+                  <User className='text-zinc-400 size-5' />
+                  <input type="text" name='name' placeholder='Seu nome completo' className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1' />
+                </div>
+
+                <div className='h-14 py-4 pl-3 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2'>
+                  <User className='text-zinc-400 size-5' />
+                  <input type="email" name='email' placeholder='Seu email pessoal' className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1' />
+                </div>
+
+                <button
+                  type='submit'
+                  className='bg-lime-300 w-full justify-center text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400'>
+                  Comfirmar viagem
                   <Plus className='size-5' />
                 </button>
               </form>
