@@ -3,12 +3,16 @@ import { FormEvent } from "react"
 
 interface ConfirmTripModalProps {
     closeComfirmModal: () => void
+    setOnnerName: (name: string) => void
+    setOnnerEmail: (email: string) => void
     createTrip: (event: FormEvent<HTMLFormElement>) => void
 }
 
 export function ConfirmTripModal({
     closeComfirmModal,
     createTrip,
+    setOnnerName,
+    setOnnerEmail,
 }: ConfirmTripModalProps) {
     return (
         <>
@@ -34,12 +38,16 @@ export function ConfirmTripModal({
                     <form onSubmit={createTrip} className='space-y-3'>
                         <div className='h-14 py-4 pl-3 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2'>
                             <User className='text-zinc-400 size-5' />
-                            <input type="text" name='name' placeholder='Seu nome completo' className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1' />
+                            <input
+                                onChange={event => setOnnerName(event.target.value)}
+                                type="text" name='name' placeholder='Seu nome completo' className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1' />
                         </div>
 
                         <div className='h-14 py-4 pl-3 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2'>
                             <User className='text-zinc-400 size-5' />
-                            <input type="email" name='email' placeholder='Seu email pessoal' className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1' />
+                            <input
+                                onChange={event => setOnnerEmail(event.target.value)}
+                                type="email" name='email' placeholder='Seu email pessoal' className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1' />
                         </div>
 
                         <button

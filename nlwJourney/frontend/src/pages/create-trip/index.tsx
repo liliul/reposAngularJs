@@ -4,6 +4,7 @@ import { InviteGuestsModal } from './invite-guests-modal'
 import { ConfirmTripModal } from './comfirm-trip-modal'
 import { DestinationAndDateSteps } from './steps/destination-and-date-steps'
 import { InviteGuestsStep } from './steps/ivite-guests-step'
+import { DateRange } from 'react-day-picker'
 
 
 export function CreateTripPage() {
@@ -11,6 +12,12 @@ export function CreateTripPage() {
 
     const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false)
     const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false)
+
+    const [destination, setDestination] = useState('')
+    const [onnerName, setOnnerName] = useState('')
+    const [onnerEmail, setOnnerEmail] = useState('')
+    const [eventStartAndEndDates, setEventStartAndEndDates] = useState<DateRange | undefined>()
+
     const [emailsToInvite, setEmailsToInvite] = useState([
         'Gokufirestore@email.com',
         'narutofirestore@email.com'
@@ -65,7 +72,17 @@ export function CreateTripPage() {
     function createTrip(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
-        navigate('/trips/123')
+        console.log(destination);
+        console.log(eventStartAndEndDates);
+        console.log(emailsToInvite);
+        console.log(onnerName);
+        console.log(onnerEmail);
+
+
+
+
+
+        // navigate('/trips/123')
     }
     return (
         <>
@@ -80,6 +97,9 @@ export function CreateTripPage() {
                             isGuestsInputOpen={isGuestsInputOpen}
                             closeGuestInput={closeGuestInput}
                             openGuestInput={openGuestInput}
+                            setDestination={setDestination}
+                            eventStartAndEndDates={eventStartAndEndDates}
+                            setEventStartAndEndDates={setEventStartAndEndDates}
                         />
 
                         {isGuestsInputOpen && (
@@ -110,6 +130,8 @@ export function CreateTripPage() {
                     <ConfirmTripModal
                         closeComfirmModal={closeComfirmModal}
                         createTrip={createTrip}
+                        setOnnerName={setOnnerName}
+                        setOnnerEmail={setOnnerEmail}
                     />
                 )}
             </section>

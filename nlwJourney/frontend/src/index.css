@@ -5,3 +5,8 @@
 * {
     min-width: 0;
 }
+
+:root {
+    --rdp-accent-color: indigo;
+    --rdp-background-color: gray;
+}
