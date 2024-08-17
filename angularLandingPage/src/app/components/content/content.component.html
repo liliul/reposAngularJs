@@ -103,12 +103,11 @@
     </article>
     }
 
-    <!--<article>
+   <!-- <article>
         <div class="content-div-text">
             <h1>Informações do usuario do Github</h1>
             <div>
-                @for (user of userGithub$; track $index) {
-                <app-view-text [name]="user" />
+                @for (user of reposGithub$; track user.id) {
                 <h1>{{user.name}}</h1>
                 <h3>{{user.description}}</h3>
                 <h3>{{user.html_url}}</h3>

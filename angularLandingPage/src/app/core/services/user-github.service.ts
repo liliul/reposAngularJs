@@ -13,6 +13,8 @@ export interface UserApiGithubInterface {
 }
 export interface ReposGithubInterface {
   name: string;
+  description: string;
+  html_url: string;
 }
 
 @Injectable({
