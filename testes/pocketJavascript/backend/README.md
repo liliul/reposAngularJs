@@ -7,6 +7,8 @@ completions
 
 Iniciar projeto
 ```bash
+nvm use
+
 npm install
 
 npm run dev
