@@ -1,5 +1,6 @@
 'use client'
 
+import { ModeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -30,7 +31,9 @@ export default function Home() {
 
   return (
     <>
-      <main className="w-full h-screen flex justify-center items-center">
+      <main className="relative w-full h-screen flex justify-center items-center">
+        <ModeToggle />
+
         <Card className="mx-auto max-w-sm">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">Login</CardTitle>
