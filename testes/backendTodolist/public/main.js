@@ -16,6 +16,11 @@ function loadTasks() {
                 const li = document.createElement('li');
                 li.textContent = task.title;
                 li.classList.toggle('completed', task.completed);
+                li.setAttribute('data-id', task.id);
+
+                const titleSpan = document.createElement('span');
+                titleSpan.textContent = task.title;
+                li.appendChild(titleSpan);
 
                 const deleteBtn = document.createElement('button');
                 deleteBtn.textContent = 'Deletar';
@@ -23,7 +28,9 @@ function loadTasks() {
                 
                 const toggleBtn = document.createElement('button');
                 toggleBtn.textContent = task.completed ? 'Desmarcar' : 'Completar';
-                toggleBtn.addEventListener('click', () => toggleTask(task.id, task.completed));
+                toggleBtn.addEventListener('click', () => {
+                    toggleTask(task.id, task.completed)
+                });
 
                 li.appendChild(toggleBtn);
                 li.appendChild(deleteBtn);
@@ -63,12 +70,15 @@ function deleteTask(id) {
 }
 
 function toggleTask(id, completed) {
+    const taskElement = document.querySelector(`#task-list li[data-id="${id}"]`);
+    const taskTitle = taskElement.querySelector('span').textContent.trim();
+   
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ completed: !completed }),
+        body: JSON.stringify({ title: taskTitle, completed: !completed }), // Agora enviamos o title
     })
         .then(() => loadTasks())
         .catch(error => console.error('Erro ao atualizar tarefa:', error));
