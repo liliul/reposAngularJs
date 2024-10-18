@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000/tasks';
+const apiUrl = 'http://localhost:3001/tasks';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadTasks();
