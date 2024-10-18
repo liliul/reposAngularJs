@@ -15,8 +15,10 @@ CREATE TABLE tasks (
 ## docker
 ```bash
 // informações do ip do container
-
 docker inspect nomeDocontainer/id | grep IPAddres
+
+// mysql no docker
+ docker exec -it nomeDocontainer mysql -u root -p
 ```
 
 ## node
