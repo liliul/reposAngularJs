@@ -53,3 +53,16 @@ li.completed {
     text-decoration: line-through;
     color: gray;
 }
+
+/* drag and drop */
+.draggable-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.completed-tasks {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+    margin-top: 20px;
+}

@@ -18,6 +18,16 @@ function loadTasks() {
                 li.classList.toggle('completed', task.completed);
                 li.setAttribute('data-id', task.id);
 
+            // Habilitando o arrasto
+                li.setAttribute('draggable', true);
+                li.addEventListener('dragstart', () => {
+                    li.classList.add('dragging');
+                });
+
+                li.addEventListener('dragend', () => {
+                    li.classList.remove('dragging');
+                });
+
                 const titleSpan = document.createElement('span');
                 titleSpan.textContent = task.title;
                 li.appendChild(titleSpan);
@@ -39,6 +49,30 @@ function loadTasks() {
         })
         .catch(error => console.error('Erro ao carregar tarefas:', error));
 }
+
+// Área de drop para tarefas concluídas
+const completedTasksDiv = document.getElementById('completed-tasks');
+
+completedTasksDiv.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    completedTasksDiv.classList.add('hovered');
+});
+
+completedTasksDiv.addEventListener('dragleave', () => {
+    completedTasksDiv.classList.remove('hovered');
+});
+
+completedTasksDiv.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const draggingItem = document.querySelector('.dragging');
+    const taskId = draggingItem.getAttribute('data-id');
+
+    // Mover a tarefa para a div de tarefas concluídas
+    completedTasksDiv.appendChild(draggingItem);
+    
+    // Atualizar o estado da tarefa para concluída (opcional)
+    toggleTask(taskId, true); // Atualiza o estado da tarefa na API
+});
 
 function addTask() {
     const input = document.getElementById('task-input');
