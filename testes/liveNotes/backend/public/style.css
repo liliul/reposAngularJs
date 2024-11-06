@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	display: flex;
+	display: grid;
 	place-content: center;
 	min-height: 90vh;
 	background: hsl(0, 0%, 94%);
