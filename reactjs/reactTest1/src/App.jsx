@@ -1,6 +1,8 @@
 import {PackingList} from "./components/items"
 import { Game } from "./components/jogo"
 import { ProductPage } from "./components/formLocal"
+import Context from "./components/context"
+
 <Game />
 function App() {
 
@@ -27,6 +29,10 @@ function App() {
         productId={123}
         
       />
+      <br />
+
+      <Context /> 
+
     </>
   )
 }
