@@ -1,6 +1,6 @@
 import {PackingList} from "./components/items"
 import { Game } from "./components/jogo"
-
+import { ProductPage } from "./components/formLocal"
 <Game />
 function App() {
 
@@ -11,6 +11,22 @@ function App() {
       <br />
       
       <Game />
+      <br />
+
+      <label>
+        <input
+          type="checkbox"
+          
+          onChange={e => setIsDark(e.target.checked)}
+        />
+        Dark mode
+      </label>
+      <hr />
+      <ProductPage
+        referrerId="wizard_of_oz"
+        productId={123}
+        
+      />
     </>
   )
 }
