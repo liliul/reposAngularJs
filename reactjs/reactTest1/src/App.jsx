@@ -1,5 +1,7 @@
 import {PackingList} from "./components/items"
+import { Game } from "./components/jogo"
 
+<Game />
 function App() {
 
   return (
@@ -7,6 +9,8 @@ function App() {
       <h1>React js</h1>
       <PackingList />
       <br />
+      
+      <Game />
     </>
   )
 }
