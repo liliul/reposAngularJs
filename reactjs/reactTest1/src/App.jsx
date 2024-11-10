@@ -2,8 +2,9 @@ import {PackingList} from "./components/items"
 import { Game } from "./components/jogo"
 import { ProductPage } from "./components/formLocal"
 import Context from "./components/context"
+import { ArrayMap } from "./components/array"
 
-<Game />
+
 function App() {
 
   return (
@@ -32,7 +33,10 @@ function App() {
       <br />
 
       <Context /> 
+      <br />
+      <hr />
 
+      <ArrayMap />  
     </>
   )
 }
