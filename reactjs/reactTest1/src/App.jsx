@@ -4,6 +4,28 @@ import { ProductPage } from "./components/formLocal"
 import Context from "./components/context"
 import { ArrayMap } from "./components/array"
 
+const itemsDoArray = [
+  {
+    "name": "Naruto Uzumaki",
+    "city": "konoha",
+    "poder": "Rasingan"
+  },
+  {
+    "name": "Som Goku",
+    "city": "Vegeta",
+    "poder": "Kame kame haa"
+  },
+  {
+    "name": "Wolverine",
+    "city": "Eua",
+    "poder": "Adiamantio"
+  },
+  {
+    "name": "Itachi Uchiha",
+    "city": "Akatsuki",
+    "poder": "Mankeyou Sharingan"      
+  }
+]
 
 function App() {
 
@@ -36,7 +58,7 @@ function App() {
       <br />
       <hr />
 
-      <ArrayMap />  
+      <ArrayMap props={itemsDoArray} />  
     </>
   )
 }
