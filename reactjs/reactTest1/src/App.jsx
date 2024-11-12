@@ -3,6 +3,7 @@ import { Game } from "./components/jogo"
 import { ProductPage } from "./components/formLocal"
 import Context from "./components/context"
 import { ArrayMap } from "./components/array"
+import { UrlViaProps } from "./components/urlViaProps"
 
 
 function App() {
@@ -36,7 +37,13 @@ function App() {
       <br />
       <hr />
 
-      <ArrayMap />  
+      <ArrayMap /> 
+
+      <br />
+      <hr />
+
+      <h1>url via props</h1>
+      <UrlViaProps url="http://localhost:3333" /> 
     </>
   )
 }
