@@ -4,7 +4,7 @@ import { ProductPage } from "./components/formLocal"
 import Context from "./components/context"
 import { ArrayMap } from "./components/array"
 import { UrlViaProps } from "./components/urlViaProps"
-
+import { TestandoProps } from "./components/props"
 
 function App() {
 
@@ -43,7 +43,14 @@ function App() {
       <hr />
 
       <h1>url via props</h1>
-      <UrlViaProps url="http://localhost:3333" /> 
+      <UrlViaProps url="http://localhost:3333" />
+
+      <br />
+      <hr />
+
+      <h1>testando props react js</h1>
+      <TestandoProps id="akjsl92kl" name="Naruto Uzumaki" poder="Rasengan" />
+      <TestandoProps id="klajh55la" name="Som Goku" poder="Tele-Transporte" />
     </>
   )
 }
