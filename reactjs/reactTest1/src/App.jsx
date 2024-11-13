@@ -5,6 +5,7 @@ import Context from "./components/context"
 import { ArrayMap } from "./components/array"
 import { UrlViaProps } from "./components/urlViaProps"
 import { TestandoProps } from "./components/props"
+import { ChildrenProps } from "./components/childrenProps"
 
 const itemsDoArray = [
     {
@@ -69,6 +70,13 @@ function App() {
       <h1>testando props react js</h1>
       <TestandoProps id="akjsl92kl" name="Naruto Uzumaki" poder="Rasengan" />
       <TestandoProps id="klajh55la" name="Som Goku" poder="Tele-Transporte" />
+
+      <br />
+      <hr />
+
+      <ChildrenProps>
+        <h1>Aqui fica o conteudo do children</h1>
+      </ChildrenProps>
     </>
   )
 }
