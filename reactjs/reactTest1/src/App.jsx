@@ -6,6 +6,24 @@ import { ArrayMap } from "./components/array"
 import { UrlViaProps } from "./components/urlViaProps"
 import { TestandoProps } from "./components/props"
 
+const itemsDoArray = [
+    {
+        "name": "Naruto Uzumaki",
+        "city": "konoha",
+        "poder": "Rasingan"
+    },
+    {
+        "name": "Som Goku",
+        "city": "Vegeta",
+        "poder": "Kame kame haa"
+    },
+    {
+        "name": "Wolverine",
+        "city": "Eua",
+        "poder": "Adiamantio"
+    }
+]
+
 function App() {
 
   return (
@@ -37,7 +55,7 @@ function App() {
       <br />
       <hr />
 
-      <ArrayMap /> 
+      <ArrayMap props={itemsDoArray} /> 
 
       <br />
       <hr />
