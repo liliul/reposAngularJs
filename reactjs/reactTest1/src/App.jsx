@@ -6,6 +6,8 @@ import { ArrayMap } from "./components/array"
 import { UrlViaProps } from "./components/urlViaProps"
 import { TestandoProps } from "./components/props"
 import { ChildrenProps } from "./components/childrenProps"
+import MyProvider from "./components/useContext/MyProvider"
+import { MyComponent } from "./components/useContext/MyComponent"
 
 const itemsDoArray = [
     {
@@ -77,6 +79,14 @@ function App() {
       <ChildrenProps>
         <h1>Aqui fica o conteudo do children</h1>
       </ChildrenProps>
+
+      <br />
+      <hr />
+      <h2>useContext</h2>
+
+      <MyProvider>
+        <MyComponent />
+      </MyProvider>
     </>
   )
 }
