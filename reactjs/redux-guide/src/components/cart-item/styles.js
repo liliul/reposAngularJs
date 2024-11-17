@@ -8,6 +8,10 @@ export const CartItemContainer = styled.div`
   p {
     color: #222222;
   }
+
+  svg {
+    color: #000;
+  }
 `;
 
 export const CartItemImage = styled.div`
