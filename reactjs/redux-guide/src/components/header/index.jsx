@@ -40,7 +40,11 @@ function Header() {
       <Styles.Logo>Redux Shopping</Styles.Logo>
       <Styles.Buttons>
         {currentUser ? (
-          <div onClick={handleLogoutClick}>Sair <Logando /></div>
+          <Styles.LogadoContainer>
+            <Logando userName={currentUser.name} userEmail={currentUser.email} />
+            
+            <div onClick={handleLogoutClick}>Sair</div>
+          </Styles.LogadoContainer>
         ): (
           <div onClick={handleLoginClick}>Login</div>
         )}

@@ -1,10 +1,17 @@
 import * as Styles from "./styles";
 
-// { userName, userEmail }
-export const Logando = () => {
+export const Logando = ({ userName, userEmail }) => {
 	return (
-		<Styles.LogadoStyles>
+		<Styles.LogadoStylesConteiner >
+			<Styles.LogadoImgUser></Styles.LogadoImgUser>
 
-		</Styles.LogadoStyles>
+			<Styles.LogadoName>
+				{ userName }
+			</Styles.LogadoName>
+
+			<Styles.LogadoEmail>
+				{ userEmail }
+			</Styles.LogadoEmail>
+		</Styles.LogadoStylesConteiner>
 	)
 }

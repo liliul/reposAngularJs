@@ -31,3 +31,9 @@ export const Buttons = styled.div`
     }
   }
 `;
+
+export const LogadoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
