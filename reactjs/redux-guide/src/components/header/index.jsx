@@ -8,6 +8,7 @@ import Cart from "../cart/index";
 import * as Styles from "./styles";
 
 import { loginUser, logoutUser } from "../../redux/user/actions";
+import { Logando } from "../login";
 
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
@@ -39,7 +40,7 @@ function Header() {
       <Styles.Logo>Redux Shopping</Styles.Logo>
       <Styles.Buttons>
         {currentUser ? (
-          <div onClick={handleLogoutClick}>Sair</div>
+          <div onClick={handleLogoutClick}>Sair <Logando /></div>
         ): (
           <div onClick={handleLoginClick}>Login</div>
         )}
