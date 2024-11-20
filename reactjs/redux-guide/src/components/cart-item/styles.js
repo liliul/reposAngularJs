@@ -10,7 +10,7 @@ export const CartItemContainer = styled.div`
   }
 
   svg {
-    color: #000;
+    color: #FFF;
   }
 `;
 

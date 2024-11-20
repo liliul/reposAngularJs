@@ -16,7 +16,7 @@ export const CartContainer = styled.div`
   transition: all 0.3s ease;
 
   p {
-    color: #222222;
+    color: #FFF;
   }
 `;
 
@@ -28,7 +28,7 @@ export const CartContent = styled.div`
   height: 100%;
   min-width: 500px;
   z-index: 200;
-  background-color: white;
+  background-color: #191919;
   padding: 20px;
   overflow-y: scroll;
 
@@ -40,9 +40,11 @@ export const CartTitle = styled.p`
   font-size: 1.325rem;
   font-weight: 600;
   margin-bottom: 15px;
+  color: #FFF;
 `;
 export const CartTotal = styled.p`
   font-weight: 600;
   font-size: 1.125rem;
   margin-bottom: 15px;
+  color: #FFF;
 `;
