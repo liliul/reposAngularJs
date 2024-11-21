@@ -8,6 +8,11 @@ import { TestandoProps } from "./components/props"
 import { ChildrenProps } from "./components/childrenProps"
 import MyProvider from "./components/useContext/MyProvider"
 import { MyComponent } from "./components/useContext/MyComponent"
+// import RenderProvider from "./components/useContext/RenderizandoJson"
+import RenderProvider from "./components/useContext/RenderListJson"
+// import { ListandoJson } from "./components/useContext/ListandoJson"
+import { ListandoJson } from "./components/useContext/ListandoJson"
+
 
 const itemsDoArray = [
     {
@@ -87,6 +92,12 @@ function App() {
       <MyProvider>
         <MyComponent />
       </MyProvider>
+
+      <br />
+      <hr />
+      <RenderProvider>
+        <ListandoJson />
+      </RenderProvider>
     </>
   )
 }
