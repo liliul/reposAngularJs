@@ -12,6 +12,7 @@ import { MyComponent } from "./components/useContext/MyComponent"
 import RenderProvider from "./components/useContext/RenderListJson"
 // import { ListandoJson } from "./components/useContext/ListandoJson"
 import { ListandoJson } from "./components/useContext/ListandoJson"
+import { ContandoComReducer } from "./components/useReducer1/Reducer1"
 
 
 const itemsDoArray = [
@@ -98,6 +99,12 @@ function App() {
       <RenderProvider>
         <ListandoJson />
       </RenderProvider>
+    
+      <br />
+      <hr />
+
+      <h1>useReducer</h1>
+      <ContandoComReducer />
     </>
   )
 }
