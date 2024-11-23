@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 const initialState = { count: 0 };
 
 function reducer(state = initialState, action) {
+  console.log('a',  action.type);
   switch (action.type) {
     case 'INCREMENT':
       return { count: state.count + 1 };
@@ -31,9 +32,11 @@ function Counter({ count, increment, decrement }) {
   );
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   count: state.count
 });
+
+export const selectorCount = (state) => state.count
 
 const mapDispatchToProps = dispatch => ({
   increment: () => dispatch({ type: 'INCREMENT' }),

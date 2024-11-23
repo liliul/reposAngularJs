@@ -14,7 +14,7 @@ import RenderProvider from "./components/useContext/RenderListJson"
 import { ListandoJson } from "./components/useContext/ListandoJson"
 import { ContandoComReducer } from "./components/useReducer1/Reducer1"
 import { ConnectedCounter } from "./components/redux"
-
+import { InfosRedux } from './components/redux/utilizandoInfosRedux'
 
 const itemsDoArray = [
     {
@@ -112,6 +112,8 @@ function App() {
       
       <h1>redux</h1>
       <ConnectedCounter />
+      <h3>Reutizando redux</h3>
+      <InfosRedux />
     </>
   )
 }
