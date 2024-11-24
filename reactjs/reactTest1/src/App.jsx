@@ -17,6 +17,7 @@ import { ConnectedCounter } from "./components/redux"
 import { InfosRedux } from './components/redux/utilizandoInfosRedux'
 import FocusInput from './components/useRef/input'
 import Timer from "./components/useRef/amazernarValores"
+import EvitarRecriarFunction from "./components/useRef/evitarRecriarFunction"
 
 const itemsDoArray = [
     {
@@ -126,7 +127,10 @@ function App() {
       
       <h2>timer</h2>
       <Timer />
-    </>
+
+      <h2>evitar recriar função</h2>
+      <EvitarRecriarFunction />
+   </>
   )
 }
 
