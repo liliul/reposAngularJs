@@ -15,6 +15,8 @@ import { ListandoJson } from "./components/useContext/ListandoJson"
 import { ContandoComReducer } from "./components/useReducer1/Reducer1"
 import { ConnectedCounter } from "./components/redux"
 import { InfosRedux } from './components/redux/utilizandoInfosRedux'
+import FocusInput from './components/useRef/input'
+import Timer from "./components/useRef/amazernarValores"
 
 const itemsDoArray = [
     {
@@ -114,6 +116,16 @@ function App() {
       <ConnectedCounter />
       <h3>Reutizando redux</h3>
       <InfosRedux />
+
+      <br />
+      <hr />
+
+      <h1>useRef</h1>
+      <h2>input focos</h2>
+      <FocusInput />
+      
+      <h2>timer</h2>
+      <Timer />
     </>
   )
 }
