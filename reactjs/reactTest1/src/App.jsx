@@ -18,6 +18,7 @@ import { InfosRedux } from './components/redux/utilizandoInfosRedux'
 import FocusInput from './components/useRef/input'
 import Timer from "./components/useRef/amazernarValores"
 import EvitarRecriarFunction from "./components/useRef/evitarRecriarFunction"
+import { useHookCounters } from "./components/hook/counters"
 
 const itemsDoArray = [
     {
@@ -38,6 +39,7 @@ const itemsDoArray = [
 ]
 
 function App() {
+  const {contar, mais, menos, limpar} = useHookCounters()
 
   return (
     <>
@@ -130,6 +132,16 @@ function App() {
 
       <h2>evitar recriar função</h2>
       <EvitarRecriarFunction />
+
+      <br />
+      <hr />
+
+      <h1>Criando hooks</h1>
+      <h2>Counters</h2>
+      <p>Contando: {contar}</p>
+      <button onClick={mais}>mais +</button>
+      <button onClick={menos}>menos -</button>
+      <button onClick={limpar}>limpar (**)</button>
    </>
   )
 }
