@@ -19,6 +19,7 @@ import FocusInput from './components/useRef/input'
 import Timer from "./components/useRef/amazernarValores"
 import EvitarRecriarFunction from "./components/useRef/evitarRecriarFunction"
 import { useHookCounters } from "./components/hook/counters"
+import { TestandoReactQuery } from "./components/reactQuery"
 
 const itemsDoArray = [
     {
@@ -142,6 +143,12 @@ function App() {
       <button onClick={mais}>mais +</button>
       <button onClick={menos}>menos -</button>
       <button onClick={limpar}>limpar (**)</button>
+
+      <br />
+      <hr />
+
+      <h1>Testando react query</h1>
+      <TestandoReactQuery />
    </>
   )
 }
