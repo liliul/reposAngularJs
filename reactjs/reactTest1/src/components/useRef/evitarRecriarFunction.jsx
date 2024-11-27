@@ -11,7 +11,7 @@ function EvitarRecriarFunction() {
     
     setTime(timerRef.current = intervalId);
 
-    return () => clearInterval(timerRef.current); // Limpa o intervalo quando o componente for desmontado
+    return () => clearInterval(timerRef.current);
   }, []);
 
   return (
