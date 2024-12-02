@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ButtonTemperature } from "./button";
+import { useColorTemperature } from "../../hook/buttonTemperature";
 
 export function Temperature() {
 	const [temp, setTemp] = useState(0)
@@ -10,6 +11,11 @@ export function Temperature() {
 	function handleTempMenos() {
 		setTemp(temp - 1)
 	}
+
+
+	useEffect(() => {
+		useColorTemperature(temp)
+	},[temp])
 
 	return (
 		<>
