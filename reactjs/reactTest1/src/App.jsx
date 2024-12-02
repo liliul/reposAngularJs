@@ -18,6 +18,7 @@ import Timer from "./components/useRef/amazernarValores"
 import EvitarRecriarFunction from "./components/useRef/evitarRecriarFunction"
 import { useHookCounters } from "./components/hook/counters"
 import { TestandoReactQuery } from "./components/reactQuery"
+import { Temperature } from "./components/buttonTemperature"
 
 const itemsDoArray = [
     {
@@ -147,6 +148,11 @@ function App() {
 
       <h1>Testando react query</h1>
       <TestandoReactQuery />
+
+      <br />
+      <hr />
+
+      <Temperature />
    </>
   )
 }
