@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { CreateContextLogin } from "../../context/contextLogin"
 
 export function ContextLoginComponent() {
-    const {setContextLogin, setContextProfile, contextProfile} = useContext(CreateContextLogin)
+    const {setContextLogin, setContextProfile, contextProfile, setContextSenha} = useContext(CreateContextLogin)
     console.log('contextProfile login = false: ',contextProfile);
     
     return (
@@ -18,6 +18,9 @@ export function ContextLoginComponent() {
             <input 
                 type="password"
                 placeholder="Senha"
+                onChange={(event) => {
+                    setContextSenha(event.target.value)
+                }}
             />
 
             <button 

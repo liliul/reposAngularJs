@@ -47,6 +47,7 @@ function App() {
   const {contar, mais, menos, limpar} = useHookCounters()
 
   const [contextLogin, setContextLogin] = useState()
+  const [contextSenha, setContextSenha] = useState()
   const [contextProfile, setContextProfile] = useState(false)
 
   return (
@@ -170,7 +171,9 @@ function App() {
         setContextLogin,
         setContextProfile,
         contextLogin,
-        contextProfile
+        contextProfile,
+        setContextSenha,
+        contextSenha
       }}>
         { contextProfile ? <ContextProfileComponent /> : <ContextLoginComponent /> }
       </CreateContextLogin.Provider>
