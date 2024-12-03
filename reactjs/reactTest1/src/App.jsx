@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import {PackingList} from "./components/items"
 import { Game } from "./components/jogo"
 import { ProductPage } from "./components/formLocal"
@@ -19,6 +21,9 @@ import EvitarRecriarFunction from "./components/useRef/evitarRecriarFunction"
 import { useHookCounters } from "./components/hook/counters"
 import { TestandoReactQuery } from "./components/reactQuery"
 import { Temperature } from "./components/buttonTemperature"
+import { ContextLoginComponent } from "./components/contextLogin/login"
+import { CreateContextLogin } from "./context/contextLogin"
+import { ContextProfileComponent } from "./components/contextLogin/profile"
 
 const itemsDoArray = [
     {
@@ -40,6 +45,9 @@ const itemsDoArray = [
 
 function App() {
   const {contar, mais, menos, limpar} = useHookCounters()
+
+  const [contextLogin, setContextLogin] = useState()
+  const [contextProfile, setContextProfile] = useState(false)
 
   return (
     <>
@@ -153,6 +161,19 @@ function App() {
       <hr />
 
       <Temperature />
+
+      <br />
+      <hr />
+
+      <h1>Novo exemplo de uso da ContextApi do react</h1>
+      <CreateContextLogin.Provider value={{
+        setContextLogin,
+        setContextProfile,
+        contextLogin,
+        contextProfile
+      }}>
+        { contextProfile ? <ContextProfileComponent /> : <ContextLoginComponent /> }
+      </CreateContextLogin.Provider>
    </>
   )
 }
