@@ -44,6 +44,8 @@ const itemsDoArray = [
 ]
 
 function App() {
+  const [isDark, setIsDark] = useState('')
+
   const {contar, mais, menos, limpar} = useHookCounters()
 
   const [contextLogin, setContextLogin] = useState()
@@ -65,7 +67,7 @@ function App() {
           
           onChange={e => setIsDark(e.target.checked)}
         />
-        Dark mode
+        {isDark ? 'Dark' : 'Light'} mode
       </label>
       <hr />
       <ProductPage
