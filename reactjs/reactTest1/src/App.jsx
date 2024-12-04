@@ -76,8 +76,10 @@ function App() {
         
       />
       <br />
+      <hr />
 
       <Context /> 
+      
       <br />
       <hr />
 

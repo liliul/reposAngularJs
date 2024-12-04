@@ -1,5 +1,9 @@
 import { createContext, useContext } from 'react';
 
+/**
+ * context api dentro de outra
+ * */
+
 const ThemeContext = createContext(null);
 
 export default function Context() {
@@ -13,8 +17,8 @@ export default function Context() {
 function Form() {
   return (
     <Panel title="Welcome">
-      <Button>Sign up</Button>
-      <Button>Log in</Button>
+      <ButtonContext>Sign up</ButtonContext>
+      <ButtonContext>Log in</ButtonContext>
       <ThemeContext.Provider value="light">
         <Footer />
       </ThemeContext.Provider>
@@ -25,7 +29,7 @@ function Form() {
 function Footer() {
   return (
     <footer>
-      <Button>Settings</Button>
+      <ButtonContext>Settings</ButtonContext>
     </footer>
   );
 }
@@ -41,8 +45,9 @@ function Panel({ title, children }) {
   )
 }
 
-function Button({ children }) {
+function ButtonContext({ children }) {
   const theme = useContext(ThemeContext);
+  console.log('theme: ', theme)
   const className = 'button-' + theme;
   return (
     <button className={className}>
