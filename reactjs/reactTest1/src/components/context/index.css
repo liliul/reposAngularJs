@@ -1,0 +1,16 @@
+.panel-dark {
+    background-color: #191919;
+    color: aliceblue;
+}
+.button-dark {
+    background-color: rgba(32, 112, 0, 0.747);
+    color: blanchedalmond;
+}
+
+.button-light {
+    background-color: #FFF;
+    color: #191919;
+    font-weight: bold;
+    padding: 5px 6px;
+    margin-top: 10px;
+}

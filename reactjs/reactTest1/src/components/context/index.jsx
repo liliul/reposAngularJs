@@ -1,5 +1,7 @@
 import { createContext, useContext } from 'react';
 
+import './index.css'
+
 /**
  * context api dentro de outra
  * */
