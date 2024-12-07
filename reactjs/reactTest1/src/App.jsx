@@ -24,6 +24,7 @@ import { Temperature } from "./components/buttonTemperature"
 import { ContextLoginComponent } from "./components/contextLogin/login"
 import { CreateContextLogin } from "./context/contextLogin"
 import { ContextProfileComponent } from "./components/contextLogin/profile"
+import { DatasComDateFns } from "./components/datasJs"
 
 const itemsDoArray = [
     {
@@ -181,6 +182,11 @@ function App() {
       }}>
         { contextProfile ? <ContextProfileComponent /> : <ContextLoginComponent /> }
       </CreateContextLogin.Provider>
+
+      <br />
+      <hr />
+
+      <DatasComDateFns />
    </>
   )
 }
