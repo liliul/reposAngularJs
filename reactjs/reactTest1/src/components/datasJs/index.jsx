@@ -1,5 +1,4 @@
 import { useState } from 'react'
-// import { toZonedTime } from 'date-fns-tz';
 import { format } from 'date-fns';
 
 const data = {
@@ -15,7 +14,6 @@ const data = {
 export function DatasComDateFns() {
     const [userTimezone, setUserTimezone] = useState("Europe/London")
 
-    // const createAtConverted = toZonedTime(data.user.createAt, userTimezone)
     const createdAtDate = new Date(data.user.createdAt);
     const formattedCreatedAt = format(createdAtDate, 'dd/MM/yyyy HH:mm:ss');
     return (
@@ -33,8 +31,6 @@ export function DatasComDateFns() {
             <br />
 
             <p>{formattedCreatedAt}</p>
-
-            {/* <span>{createAtConverted.toString()}</span> */}
         </>
     )
 }
