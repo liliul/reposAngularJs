@@ -31,6 +31,8 @@ export function DatasComDateFns() {
             <br />
 
             <p>{formattedCreatedAt}</p>
+            <br />
+            <span>Formato timezone: {userTimezone}</span>
         </>
     )
 }
