@@ -25,6 +25,7 @@ import { ContextLoginComponent } from "./components/contextLogin/login"
 import { CreateContextLogin } from "./context/contextLogin"
 import { ContextProfileComponent } from "./components/contextLogin/profile"
 import { DatasComDateFns } from "./components/datasJs"
+import { ModalHook } from "./components/modalHook"
 
 const itemsDoArray = [
     {
@@ -187,6 +188,12 @@ function App() {
       <hr />
 
       <DatasComDateFns />
+
+      <br />
+      <hr />
+
+      <h1>Modal hook</h1>
+      <ModalHook />
    </>
   )
 }
