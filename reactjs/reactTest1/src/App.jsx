@@ -26,6 +26,7 @@ import { CreateContextLogin } from "./context/contextLogin"
 import { ContextProfileComponent } from "./components/contextLogin/profile"
 import { DatasComDateFns } from "./components/datasJs"
 import { ModalHook } from "./components/modalHook"
+import { ContexInfo } from "./components/contextInfo"
 
 const itemsDoArray = [
     {
@@ -182,6 +183,13 @@ function App() {
         contextSenha
       }}>
         { contextProfile ? <ContextProfileComponent /> : <ContextLoginComponent /> }
+
+        <br />
+
+        <h1>Context Info</h1>
+        <p>pegando o email do contextLogin</p>
+        <ContexInfo />
+      
       </CreateContextLogin.Provider>
 
       <br />
@@ -193,7 +201,7 @@ function App() {
       <hr />
 
       <h1>Modal hook</h1>
-      <ModalHook />
+      <ModalHook />      
    </>
   )
 }
