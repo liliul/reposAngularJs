@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import './index.css';
 
 export function DarkLight() {
   const [theme, setTheme] = useState('light'); 
-
+  
   // Função para definir o tema com base na preferência do sistema
   const handleThemeChange = (e) => {
     setTheme(e.matches ? 'dark' : 'light');
