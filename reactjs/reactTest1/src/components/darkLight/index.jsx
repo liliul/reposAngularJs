@@ -29,6 +29,16 @@ export function DarkLight() {
     <div className='tema'>
         <div className={theme}>
             <h1>O tema atual é {theme === 'dark' ? 'escuro' : 'claro'}</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+            <h2 className={theme === 'dark' ? 'h2-dark' : 'h2-light'}>
+              Reprehenderit, voluptate, vero at excepturi
+            </h2>
+            <p className={theme === 'dark' ? 'p-dark' : 'p-light'}>
+              eum cupiditate voluptates culpa dignissimos nostrum nulla sit 
+              hic id sint ducimus iste deserunt minus maxime minima!
+            </p>
+
         </div>
     </div>
   );

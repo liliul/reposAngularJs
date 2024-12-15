@@ -2,9 +2,22 @@
     background-color: white;
     color: black;
 }
+.h2-light {
+    color: brown;
+    font-size: 20px;
+}
+.p-light {
+    color: aqua;
+}
   
 .tema.dark {
     background-color: black;
     color: white;
 }
-  
+.h2-dark {
+    color: aqua;
+    font-size: 20px;
+}
+.p-dark {
+    color: brown;
+} 
