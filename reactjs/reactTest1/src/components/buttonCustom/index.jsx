@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import './index.css';
 
 export function ButtonCustom() {
+    const [mudarCor, setMudarCor] = useState('c-content-custom')
+
     return (
         <>
             <section className="c-button-custom">
-                <div className="c-content-custom">
+                <div className={mudarCor}>
                     <article className="text-custom">
                         <h2>Texto Customizando</h2>
 
@@ -14,9 +17,9 @@ export function ButtonCustom() {
                     </article>
 
                     <div className='div-button-custom'>
-                        <button className="button-custom">Dark green</button>
+                        <button onClick={() => { setMudarCor('c-content-custom-dark')}} className="button-custom">Dark green</button>
                         
-                        <button className="button-custom">Light blue</button>
+                        <button onClick={() => { setMudarCor('c-content-custom-light')}} className="button-custom">Light blue</button>
                     </div>
                 </div>
             </section>
