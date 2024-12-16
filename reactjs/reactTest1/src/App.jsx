@@ -28,6 +28,7 @@ import { DatasComDateFns } from "./components/datasJs"
 import { ModalHook } from "./components/modalHook"
 import { ContexInfo } from "./components/contextInfo"
 import { DarkLight } from "./components/darkLight"
+import { ButtonCustom } from "./components/buttonCustom"
 
 const itemsDoArray = [
     {
@@ -207,7 +208,14 @@ function App() {
       <br />
       <hr />
 
-      <DarkLight />  
+      <DarkLight /> 
+
+      <br />
+      <hr />
+
+      <h1>Button Custom</h1>
+
+      <ButtonCustom /> 
    </>
   )
 }
