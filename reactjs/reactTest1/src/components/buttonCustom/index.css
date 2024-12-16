@@ -1,4 +1,28 @@
-.c-button-custom {}
-.c-content-custom {}
-.text-custom {}
-.button-custom {}
+.c-button-custom {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.c-content-custom-dark {
+    background-color: midnightblue;
+}
+.text-custom-dark {
+    color: antiquewhite;
+}
+
+.c-content-custom-light {
+    background-color: cyan;
+}
+.text-custom-light {
+    color: #212121;
+}
+
+.div-button-custom {
+    margin-top: 50px;
+}
+.button-custom {
+    padding: 5px 15px;
+    margin-right: 10px;
+}
