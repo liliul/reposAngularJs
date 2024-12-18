@@ -29,6 +29,7 @@ import { ModalHook } from "./components/modalHook"
 import { ContexInfo } from "./components/contextInfo"
 import { DarkLight } from "./components/darkLight"
 import { ButtonCustom } from "./components/buttonCustom"
+import RoutePrivate from "./routes"
 
 const itemsDoArray = [
     {
@@ -216,6 +217,11 @@ function App() {
       <h1>Button Custom</h1>
 
       <ButtonCustom /> 
+
+      <br />
+      <hr />
+
+      <RoutePrivate />
    </>
   )
 }
