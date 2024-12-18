@@ -1,33 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import { Home } from '../components/routesComponents/home';
 import { PrivatePage } from '../components/routesComponents/PrivatePage';
 import { LoginPrivate } from '../components/routesComponents/loginPrivate';
 
-const PrivateRoute = ({ element, ...rest }) => {
+const PrivateRoute = ({ element }) => {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
 
     return isAuthenticated === 'true' ? element : <Login />;
 };
-
-// const Home = () => <div><h2>Home Page</h2><Link to="/login">Login</Link></div>;
-
-// const PrivatePage = () => <div><h2>Private Page - Only Authenticated Users can Access</h2></div>;
-
-// const Login = () => {
-//     const handleLogin = () => {
-//         localStorage.setItem('isAuthenticated', 'true');
-//         window.location.href = '/private';
-//     };
-// 
-//     return (
-//         <div>
-//             <h2>Login Page</h2>
-//             <button onClick={handleLogin}>Login</button>
-//         </div>
-//     );
-// };
 
 const RoutePrivate = () => {
     return (
