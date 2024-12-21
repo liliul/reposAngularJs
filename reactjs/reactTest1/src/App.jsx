@@ -30,6 +30,8 @@ import { ContexInfo } from "./components/contextInfo"
 import { DarkLight } from "./components/darkLight"
 import { ButtonCustom } from "./components/buttonCustom"
 import RoutePrivate from "./routes"
+import LoginForm from "./components/forms/index1"
+import { HookForm } from "./components/forms/hookForms"
 
 const itemsDoArray = [
     {
@@ -222,6 +224,17 @@ function App() {
       <hr />
 
       <RoutePrivate />
+
+      <br />
+      <hr />
+
+      <h1>Form simples com react js</h1>
+
+      <LoginForm />
+
+      <h2>React Hook From</h2>
+
+      <HookForm />
    </>
   )
 }
