@@ -62,6 +62,9 @@ export const FormReactPuro = () => {
     if (!formIsValid) return;
 
     alert(JSON.stringify(userForm));
+
+    localStorage.setItem('isAuthenticated', 'true');
+    window.location.href = '/private';
   };
 
   return (

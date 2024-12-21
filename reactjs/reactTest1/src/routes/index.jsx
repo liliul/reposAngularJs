@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import { Home } from '../components/routesComponents/home';
 import { PrivatePage } from '../components/routesComponents/PrivatePage';
-import { LoginPrivate } from '../components/routesComponents/loginPrivate';
+// import { LoginPrivate } from '../components/routesComponents/loginPrivate';
+
+import { FormReactPuro } from '../components/forms/index2';
 
 const PrivateRoute = ({ element }) => {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
 
-    return isAuthenticated === 'true' ? element : <Login />;
+    // return isAuthenticated === 'true' ? element : <Login />;
+    return isAuthenticated === 'true' ? element : <FormReactPuro />;
 };
 
 const RoutePrivate = () => {
@@ -25,7 +28,7 @@ const RoutePrivate = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/private" element={<PrivateRoute element={<PrivatePage />} />} />
-                <Route path="/login" element={<LoginPrivate />} />
+                <Route path="/login" element={<FormReactPuro />} />
             </Routes>
         </Router>
     );
