@@ -2,13 +2,14 @@ import { useState } from 'react';
 import './index.css';
 
 export function ButtonCustom() {
-    const [mudarCor, setMudarCor] = useState('c-content-custom')
+    const [mudarCorBg, setMudarCorBg] = useState('c-content-custom')
+    const [mudarCorTxt, setMudarCorTxt] = useState('text-custom')
 
     return (
         <>
             <section className="c-button-custom">
-                <div className={mudarCor}>
-                    <article className="text-custom">
+                <div className={mudarCorBg}>
+                    <article className={mudarCorTxt}>
                         <h2>Texto Customizando</h2>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia</p>
@@ -17,9 +18,9 @@ export function ButtonCustom() {
                     </article>
 
                     <div className='div-button-custom'>
-                        <button onClick={() => { setMudarCor('c-content-custom-dark')}} className="button-custom">Dark green</button>
+                        <button onClick={() => { setMudarCorBg('c-content-custom-dark'), setMudarCorTxt('text-custom-dark')}} className="button-custom">Dark green</button>
                         
-                        <button onClick={() => { setMudarCor('c-content-custom-light')}} className="button-custom">Light blue</button>
+                        <button onClick={() => { setMudarCorBg('c-content-custom-light'), setMudarCorTxt('text-custom-light')}} className="button-custom">Light blue</button>
                     </div>
                 </div>
             </section>
