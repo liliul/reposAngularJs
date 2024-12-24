@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>React js com Tailwindcss</h1>
+      <h1 className="text-3xl text-blue-800">React js com Tailwindcss</h1>
     </>
   )
 }
