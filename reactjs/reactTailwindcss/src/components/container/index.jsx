@@ -22,7 +22,7 @@ export default function Container({ children }) {
           setTheme(theme === themes.light ? themes.dark : themes.light)
         }
       >
-        {theme === themes.light ? "Toggle dark mode" : "Toggle light mode"}
+        {theme === themes.light ? "dark mode" : "light mode"}
       </button>
     </div>
   );

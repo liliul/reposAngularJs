@@ -1,11 +1,12 @@
 import ThemeProvider from "./contextApi/theme/Theme"
 import Container from "./components/container"
+import { Welcome } from "./components/welcome"
 
 function App() {
   return (
     <ThemeProvider>
       <Container>
-        <h1>Tailwindcss</h1>
+        <Welcome />
       </Container>
     </ThemeProvider>
   )
