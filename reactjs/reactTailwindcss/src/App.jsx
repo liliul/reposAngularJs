@@ -1,8 +1,13 @@
+import ThemeProvider from "./contextApi/theme/Theme"
+import Container from "./components/container"
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl text-blue-800">React js com Tailwindcss</h1>
-    </>
+    <ThemeProvider>
+      <Container>
+        <h1>Tailwindcss</h1>
+      </Container>
+    </ThemeProvider>
   )
 }
 
