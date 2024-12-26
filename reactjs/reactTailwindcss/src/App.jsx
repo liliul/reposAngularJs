@@ -1,16 +1,16 @@
+import {BrowserRouter, Routes, Route} from 'react-router'
 import ThemeProvider from "./contextApi/theme/Theme"
-import Container from "./components/container"
-import { Welcome } from "./components/welcome"
-import { ThemeMode } from "./components/infosContxtApi/themeMode"
+import Home from './page/Home'
+
 
 function App() {
   return (
     <ThemeProvider>
-      <Container>
-        <Welcome />
-        
-        <ThemeMode />
-      </Container>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }
