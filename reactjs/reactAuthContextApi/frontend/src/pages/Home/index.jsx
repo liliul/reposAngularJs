@@ -6,7 +6,7 @@ export const Home = () => {
       <div className="home-container">
         <div className="home-content">
           <h1 className="home-title">
-            <span style={{ color: "#fff" }}>Jovem Programador</span>
+            <span style={{ color: "#fff" }}>Autenticação e ContextApi</span>
           </h1>
           <br />
           <br />
