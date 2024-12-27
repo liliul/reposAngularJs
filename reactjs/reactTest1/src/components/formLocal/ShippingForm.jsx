@@ -6,7 +6,7 @@ const ShippingForm = memo(function ShippingForm({ onSubmit }) {
   console.log('[ARTIFICIALLY SLOW] Rendering <ShippingForm />');
   let startTime = performance.now();
   while (performance.now() - startTime < 500) {
-    
+    console.log('P now', startTime)
   }
 
   function handleSubmit(e) {
