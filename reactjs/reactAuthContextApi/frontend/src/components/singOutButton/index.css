@@ -1,0 +1,23 @@
+.c-sing-out-button {
+    padding: 1px;
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+
+    width: fit-content;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.sing-out-button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+
+    background-color: #191919;
+    color: whitesmoke;
+}
