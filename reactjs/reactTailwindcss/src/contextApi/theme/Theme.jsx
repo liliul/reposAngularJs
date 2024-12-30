@@ -14,6 +14,12 @@ export const themes = {
       background: "black",
       text: "white"
     }
+  },
+  dracula: {
+    colors: {
+      background: "#21222c",
+      text: "#8be9fd"
+    }
   }
 };
 
