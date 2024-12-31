@@ -3,6 +3,7 @@ import React from "react";
 import { useTheme } from "../../contextApi/theme/Theme";
 import { ButtonThemeMode } from "./button";
 import { ThemeDraculaButton } from "../themeDraculaButton";
+import { ThemesModeButton } from "../buttonThemeMode";
 
 export default function Container({ children }) {
   const { theme } = useTheme();
@@ -20,6 +21,8 @@ export default function Container({ children }) {
 
       <ButtonThemeMode />
       <ThemeDraculaButton />
+
+      <ThemesModeButton />   
     </div>
   );
 }
