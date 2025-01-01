@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useTheme } from "../../contextApi/theme/Theme";
+import { useTheme, themes } from "../../contextApi/theme/Theme";
 import { ButtonThemeMode } from "./button";
 import { ThemeDraculaButton } from "../themeDraculaButton";
 import { ThemesModeButton } from "../buttonThemeMode";
@@ -22,7 +22,18 @@ export default function Container({ children }) {
       <ButtonThemeMode />
       <ThemeDraculaButton />
 
-      <ThemesModeButton />   
+      <ThemesModeButton
+        titulo="Dark"
+        currentTheme={themes.dark}
+      />
+      <ThemesModeButton
+        titulo="Light"
+        currentTheme={themes.light}
+      /> 
+      <ThemesModeButton
+        titulo="Dracula"
+        currentTheme={themes.dracula}
+      />    
     </div>
   );
 }

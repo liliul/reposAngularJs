@@ -1,17 +1,19 @@
-import { useTheme, themes } from "../../contextApi/theme/Theme";
+import { useTheme } from "../../contextApi/theme/Theme";
 
-export function ThemesModeButton() {
-    const {setTheme, theme} = useTheme()
+export function ThemesModeButton({ titulo, currentTheme }) {
+    const { setTheme } = useTheme()
+
+    function handleTheme() {
+        setTheme(currentTheme)
+    }
 
     return (
         <>
             <button
                 className="w-[150px] h-[40px] bg-green-600 rounded-sm m-2"
-                onClick={() =>
-                setTheme(themes.dracula)
-                }
+                onClick={handleTheme}
             >
-                {theme === themes.dracula ? "dracula mode" : "sem mode"}
+                { titulo }
             </button>
         </>
     )
