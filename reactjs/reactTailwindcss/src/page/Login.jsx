@@ -2,7 +2,14 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 function Login() {
-    const {register, handleSubmit, watch, reset, formState: {errors}} = useForm({
+    const {
+        register, 
+        handleSubmit, 
+        watch, 
+        reset,
+        clearErrors, 
+        formState: {errors}
+    } = useForm({
         defaultValues:{
             NameUser: "",
             PasswordUser: "",
@@ -19,7 +26,7 @@ function Login() {
 
     const dataUser = (data) => {console.log(setInfo(data));}
 
-    console.log('watch', watch("EmailUser")); 
+    console.log('watch', watch(["EmailUser","PasswordUser"])); 
     console.log('info', info);
     
     
@@ -65,6 +72,13 @@ function Login() {
                     type="button"
                     onClick={() => reset()}
                     value="Resetar campos"
+                />
+
+                <input
+                    className="mt-5 bg-orange-600 rounded-md p-2"
+                    type="button"
+                    onClick={() => clearErrors(['NameUser','EmailUser','PasswordUser'])}
+                    value="Limpar erros"
                 />
             </form>
         </>
