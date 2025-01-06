@@ -113,6 +113,8 @@ const formUserSchema = z.object({
     }, 'O formato do precisa ser gmail'),
 })
 function Login() {
+    const [mostraSenha, setMostraSenha] = useState(false)
+
     const {
         register, 
         handleSubmit, 
@@ -157,11 +159,29 @@ function Login() {
                 />
 
                 <span className="text-white mt-2 mb-1">Senha <span className="text-red-500">{errors.PasswordUser?.message}</span></span>
-                <input
-                    type="password"
-                    className="p-2 rounded-sm" 
-                    {...register("PasswordUser")} 
-                />
+                <div>
+                    <input
+                        type={!mostraSenha ? "password" : "text"}
+                        className="p-2 rounded-sm" 
+                        {...register("PasswordUser")} 
+                    />
+
+                    {!mostraSenha ? (
+                        <button
+                            onClick={() => {setMostraSenha(true)}} 
+                            type="button"
+                        >
+                            Mostrar senha
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => {setMostraSenha(false)}} 
+                            type="button"
+                        >
+                            Ocultar senha
+                        </button>
+                    )}
+                </div>
 
                 <button 
                     className="mt-5 bg-blue-600 rounded-md p-2" 
