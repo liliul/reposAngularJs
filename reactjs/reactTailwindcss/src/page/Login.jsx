@@ -159,7 +159,7 @@ function Login() {
                 />
 
                 <span className="text-white mt-2 mb-1">Senha <span className="text-red-500">{errors.PasswordUser?.message}</span></span>
-                <div>
+                <div className="flex justify-between">
                     <input
                         type={!mostraSenha ? "password" : "text"}
                         className="p-2 rounded-sm" 
@@ -168,6 +168,7 @@ function Login() {
 
                     {!mostraSenha ? (
                         <button
+                            className="p-2 rounded-md bg-green-500"
                             onClick={() => {setMostraSenha(true)}} 
                             type="button"
                         >
@@ -175,6 +176,7 @@ function Login() {
                         </button>
                     ) : (
                         <button
+                            className="p-2 rounded-md bg-pink-800"
                             onClick={() => {setMostraSenha(false)}} 
                             type="button"
                         >
