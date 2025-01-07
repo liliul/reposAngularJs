@@ -120,6 +120,11 @@ function Login() {
         handleSubmit,
         formState: { errors }
     } = useForm({
+        defaultValues: {
+            NameUser: "",
+            EmailUser: "",
+            PasswordUser: "",
+        },
         resolver: zodResolver(formUserSchema)
     });
 
