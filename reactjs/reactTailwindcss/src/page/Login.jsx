@@ -116,13 +116,13 @@ function Login() {
     const [mostraSenha, setMostraSenha] = useState(false)
 
     const {
-        register, 
-        handleSubmit, 
-        formState: {errors}
+        register,
+        handleSubmit,
+        formState: { errors }
     } = useForm({
         resolver: zodResolver(formUserSchema)
     });
-    
+
     // useState dos register do hook form
     // {
     //     NameUser: "",
@@ -131,53 +131,53 @@ function Login() {
     // }
     const [info, setInfo] = useState()
 
-    const dataUser = (data) => {console.log(setInfo(data));}
+    const dataUser = (data) => { console.log(setInfo(data)); }
 
     console.log('info', info);
-    
-    
+
+
 
     return (
         <>
             <form
-                className="w-[500px] rounded-lg bg-slate-700 grid p-5 m-auto mt-20" 
+                className="w-[500px] rounded-lg bg-slate-700 grid p-5 m-auto mt-20"
                 onSubmit={handleSubmit(dataUser)}
             >
                 <h1 className="text-xl text-yellow-100">Fazer Login</h1>
-                
+
                 <span className="text-white mt-2 mb-1">Nome <span className="text-red-500">{errors.NameUser?.message}</span></span>
                 <input
-                    className="p-2 rounded-sm" 
-                    {...register("NameUser")} 
+                    className="p-2 rounded-sm"
+                    {...register("NameUser")}
                 />
 
                 <span className="text-white mt-2 mb-1">Email <span className="text-red-500">{errors.EmailUser?.message}</span></span>
                 <input
                     type="email"
-                    className="p-2 rounded-sm" 
-                    {...register("EmailUser")} 
+                    className="p-2 rounded-sm"
+                    {...register("EmailUser")}
                 />
 
                 <span className="text-white mt-2 mb-1">Senha <span className="text-red-500">{errors.PasswordUser?.message}</span></span>
                 <div className="flex justify-between">
                     <input
                         type={!mostraSenha ? "password" : "text"}
-                        className="p-2 rounded-sm" 
-                        {...register("PasswordUser")} 
+                        className="p-2 rounded-sm"
+                        {...register("PasswordUser")}
                     />
 
                     {!mostraSenha ? (
                         <button
-                            className="p-2 rounded-md bg-green-500"
-                            onClick={() => {setMostraSenha(true)}} 
+                            className="p-2 rounded-md bg-green-500 text-white"
+                            onClick={() => { setMostraSenha(true) }}
                             type="button"
                         >
                             Mostrar senha
                         </button>
                     ) : (
                         <button
-                            className="p-2 rounded-md bg-pink-800"
-                            onClick={() => {setMostraSenha(false)}} 
+                            className="p-2 rounded-md bg-pink-800 text-white"
+                            onClick={() => { setMostraSenha(false) }}
                             type="button"
                         >
                             Ocultar senha
@@ -185,9 +185,9 @@ function Login() {
                     )}
                 </div>
 
-                <button 
-                    className="mt-5 bg-blue-600 rounded-md p-2" 
-                    type="submit"  
+                <button
+                    className="mt-5 bg-blue-600 rounded-md p-2 text-white"
+                    type="submit"
                 >
                     Enviar
                 </button>
