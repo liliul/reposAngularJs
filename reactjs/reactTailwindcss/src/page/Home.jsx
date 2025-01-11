@@ -3,6 +3,7 @@ import {Link} from 'react-router'
 import Container from "../components/container"
 import { Welcome } from "../components/welcome"
 import { ThemeMode } from "../components/infosContxtApi/themeMode"
+import { Counter } from '../redux/createSlice1/Counter'
 
 const Home = () => {
     return (
@@ -14,6 +15,10 @@ const Home = () => {
                 <section className="rounded-md w-[850px]">
                     <h3>Lista de Links</h3>
                     <Link to="/login">Login</Link>
+
+                    <div className='bg-blue-500'>
+                        <Counter />
+                    </div>
                 </section>
             </Container>
         </>
