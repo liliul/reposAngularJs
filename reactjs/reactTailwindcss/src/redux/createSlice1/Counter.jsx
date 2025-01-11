@@ -8,16 +8,18 @@ export function Counter() {
   const dispatch = useDispatch()
 
   return (
-    <div>
+    <div className={styles.row}>
       <div>
         <button
+          className={styles.button}
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
           Increment
         </button>
-        <span>{count}</span>
+        <span className={styles.value}>{count}</span>
         <button
+          className={styles.button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
