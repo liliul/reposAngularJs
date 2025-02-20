@@ -22,6 +22,8 @@ const Home = () => {
                     <div className='bg-blue-500'>
                         <Counter />
                     </div>
+
+                    <Link className='text-lg text-gray-800' to="pagina">Paginação</Link>
                 </section>
             </Container>
         </>
