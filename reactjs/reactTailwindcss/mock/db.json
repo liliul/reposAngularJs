@@ -41,6 +41,48 @@
         "descricao": "",
         "preco": 7.5,
         "categoria_id": 2
+      },
+      {
+        "id": 7,
+        "nome": "Mc-X",
+        "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+        "preco": 31.5,
+        "categoria_id": 1
+      },
+      {
+        "id": 8,
+        "nome": "X-Burgues",
+        "descricao": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+        "preco": 11.5,
+        "categoria_id": 1
+      },
+      {
+        "id": 9,
+        "nome": "X-King",
+        "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+        "preco": 15,
+        "categoria_id": 1
+      },
+      {
+        "id": 10,
+        "nome": "burgue-king",
+        "descricao": "Pão, 2 bifes de hambúrguer 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+        "preco": 9,
+        "categoria_id": 1
+      },
+      {
+        "id": 11,
+        "nome": "Milk Chocolate",
+        "descricao": "",
+        "preco": 5.5,
+        "categoria_id": 2
+      },
+      {
+        "id": 12,
+        "nome": "Milk Morango",
+        "descricao": "",
+        "preco": 5.5,
+        "categoria_id": 2
       }
     ],
     "categorias": [
