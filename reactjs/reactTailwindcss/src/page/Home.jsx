@@ -5,6 +5,7 @@ import { Welcome } from "../components/welcome"
 import { ThemeMode } from "../components/infosContxtApi/themeMode"
 import { Counter } from '../redux/createSlice1/Counter'
 import Like from '../components/like'
+import LazyLoading from '../components/lazyLoading'
 
 const Home = () => {
     return (
@@ -24,6 +25,8 @@ const Home = () => {
                     </div>
 
                     <Link className='text-lg text-gray-800' to="pagina">Paginação</Link>
+
+                    <LazyLoading />
                 </section>
             </Container>
         </>
