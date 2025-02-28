@@ -2,7 +2,7 @@ import React, { useReducer, useState } from 'react';
 
 
 const initialState = {
-    tasks: [],
+    tasks: JSON.parse(localStorage.getItem('task')) || [],
 };
 
 const initialState2 = {
@@ -10,14 +10,21 @@ const initialState2 = {
 };
 
 function reducer(state, action) {
+    let new_tasks
+
     switch (action.type) {
         case 'ADD_TASK':
+            new_tasks = [...state.tasks, { id: Date.now(), data: Date(), text: action.payload }]
+            localStorage.setItem('task', JSON.stringify(new_tasks))
             return {
-                tasks: [...state.tasks, { id: Date.now(), data: Date(), text: action.payload }],
+                tasks: new_tasks
             };
         case 'REMOVE_TASK':
+            new_tasks = state.tasks.filter((task) => task.id !== action.payload)
+            localStorage.setItem('task', JSON.stringify(new_tasks))
+
             return {
-                tasks: state.tasks.filter((task) => task.id !== action.payload),
+                tasks: new_tasks
             };        
         default:
             return state;
@@ -28,7 +35,7 @@ function reducer2(state, action) {
     switch (action.type) {
         case 'DATA_TASK':
             return {
-                data: [...state.data, { id: Date.now(), data: Date()}],
+                data: [...state.data, { id: Date.now(), data: Date().toLocaleString()}],
             };      
         default:
             return state;
