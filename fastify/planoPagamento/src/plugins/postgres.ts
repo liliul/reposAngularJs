@@ -1,5 +1,5 @@
-import fp from 'fastify-plugin'
 import postgres from '@fastify/postgres'
+import fp from 'fastify-plugin'
 
 export default fp(async (app) => {
   app.register(postgres, {
