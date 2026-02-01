@@ -22,3 +22,10 @@ export async function healthRoutes(app: FastifyInstance) {
     },
   );
 }
+
+export async function healthPostgres(app: FastifyInstance) {
+ app.get('/health/db', async () => {
+  const { rows } = await app.pg.query('SELECT 1')
+  return { db: 'ok conectado com postgres...' }
+}) 
+}
