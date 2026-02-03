@@ -1,42 +1,55 @@
+// auth.service.ts
 import bcrypt from 'bcrypt'
 import { randomUUID } from 'crypto'
-import { appJwt } from '../../shared/utils/jwt'
-import { authRepository } from './auth.repository'
+import { AuthRepository } from './auth.repository'
 
-class AuthService {
+type JwtSigner = (payload: any, options?: any) => string
+
+export class AuthService {
+  constructor(
+    private authRepository: AuthRepository,
+    private signJwt: JwtSigner
+  ) {}
+
   async login({ email, password }: any) {
-    const user = await authRepository.findUserByEmail(email)
-    if (!user) throw new Error('Credenciais inválidas')
+    const user = await this.authRepository.findUserByEmail(email)
+    if (!user) {
+      throw new Error('Credenciais inválidas')
+    }
 
-    const valid = await bcrypt.compare(password, user.password)
-    if (!valid) throw new Error('Credenciais inválidas')
+    const valid = await bcrypt.compare(password, user.password_hash)
+    if (!valid) {
+      throw new Error('Credenciais inválidas')
+    }
 
-    const accessToken = appJwt.sign(user.id)
+    const accessToken = this.signJwt({ role: user.role }, { subject: user.id, expiresIn: '15m' })
+
     const refreshToken = randomUUID()
-
-    await authRepository.saveRefreshToken(user.id, refreshToken)
+    await this.authRepository.saveRefreshToken(user.id, refreshToken)
 
     return { accessToken, refreshToken }
   }
 
   async refresh({ refreshToken }: any) {
-    const token = await authRepository.findValidRefreshToken(refreshToken)
-    if (!token) throw new Error('Refresh inválido')
+    const token = await this.authRepository.findValidRefreshToken(refreshToken)
+    if (!token) {
+      throw new Error('Refresh inválido')
+    }
 
-    await authRepository.revokeRefreshToken(token.id)
+    await this.authRepository.revokeRefreshToken(token.id)
 
-    const newRefresh = randomUUID()
-    await authRepository.saveRefreshToken(token.user_id, newRefresh)
+    const newRefreshToken = randomUUID()
+    await this.authRepository.saveRefreshToken(token.user_id, newRefreshToken)
+
+    const accessToken = this.signJwt({}, { subject: token.user_id, expiresIn: '15m' })
 
     return {
-      accessToken: appJwt.sign(token.user_id),
-      refreshToken: newRefresh,
+      accessToken,
+      refreshToken: newRefreshToken,
     }
   }
 
   async logout({ refreshToken }: any) {
-    await authRepository.revokeByToken(refreshToken)
+    await this.authRepository.revokeByToken(refreshToken)
   }
 }
-
-export const authService = new AuthService()

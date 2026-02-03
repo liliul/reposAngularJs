@@ -1,8 +1,16 @@
 import type { FastifyInstance } from 'fastify'
-import { authController } from './auth.controller'
+import { AuthController } from './auth.controller.js'
+import { AuthRepository } from './auth.repository.js'
+import { AuthService } from './auth.service.js'
 
 export async function authRoutes(app: FastifyInstance) {
-  app.post('/login', authController.login)
-  app.post('/refresh', authController.refresh)
-  app.post('/logout', authController.logout)
+  const authRepository = new AuthRepository(app)
+
+  const authService = new AuthService(authRepository, app.jwt.sign.bind(app.jwt))
+
+  const authController = new AuthController(authService)
+
+  app.post('/login', authController.login.bind(authController))
+  app.post('/refresh', authController.refresh.bind(authController))
+  app.post('/logout', authController.logout.bind(authController))
 }
